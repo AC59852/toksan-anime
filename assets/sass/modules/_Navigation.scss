@@ -1,0 +1,21 @@
+header {
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    background-color: #181818;
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 55px;
+        li {
+            a {
+                font-size: 24px;
+                svg {
+                    color: white;
+                }    
+            }
+        }
+    }
+}

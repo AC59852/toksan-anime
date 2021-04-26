@@ -32,8 +32,24 @@ export default {
 
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
-    // '@nuxtjs/eslint-module'
+    '@nuxtjs/google-fonts',
+    ['nuxt-fontawesome', {
+      component: 'fa', //customize component name
+      imports: [{
+          set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faFireAlt']
+          },
+          {set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faBook']
+          },
+          {set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faHome']
+          },
+          {set: '@fortawesome/free-solid-svg-icons',
+          icons: ['faSearch']
+          },
+      ]
+   }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -49,5 +65,12 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-  }
+  },
+
+  googleFonts: {
+    families: {
+      Assistant: [300, 400, 500, 600, 700, 800],
+      Spartan: [400, 500, 600, 700, 800]
+    }
+  },
 }

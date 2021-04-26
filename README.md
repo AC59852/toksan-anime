@@ -53,7 +53,7 @@ npm run start
       <br>GitHub Pages
     </td>
     <td align="center" width="160">
-        <img src="https://logos-world.net/wp-content/uploads/2021/03/Google-Fonts-Logo.png" width="68" height="68" alt="Google Fonts Logo" />
+        <img src="https://pbs.twimg.com/profile_images/1366808543773384704/8qFXRmFc_400x400.png" width="68" height="68" alt="Google Fonts Logo" />
       <br>Google Fonts
     </td>
   </tr>

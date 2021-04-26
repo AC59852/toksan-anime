@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/AC59852/toksan-anime/8b0c0ef6b120859af3c972dbd835c399f88eb24e/assets/icons/toksan_logo.svg" width="350" height="350">
+<img src="https://raw.githubusercontent.com/AC59852/toksan-anime/8b0c0ef6b120859af3c972dbd835c399f88eb24e/assets/icons/toksan_logo.svg" width="400" height="400">
 
 Toksan Anime is a project created by Austin Caron and Patrick Bradley to display popular/favourite anime. Specific anime chosen from our top 10 anime lists will have their own uniqe pages, with the intent to tie in each page to the overall site, while applying our own styles to our chosen animes.
 

@@ -33,7 +33,7 @@ npm run start
 <table>
   <tr>
   <td align="center" width="96">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/512px-Nuxt_logo.svg.png" width="48" height="48" alt="Nuxt.js Logo" />
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Nuxt_logo.svg/512px-Nuxt_logo.svg.png" width="58" height="48" alt="Nuxt.js Logo" />
       <br>Nuxt.js
     </td>
     <td align="center" width="96">
@@ -45,7 +45,7 @@ npm run start
       <br>Font Awesome Icons
     </td>
     <td align="center" width="96">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Axios_logo_%282017%29.svg/512px-Axios_logo_%282017%29.svg.png" width="48" height="48" alt="Axios Logo" />
+        <img src="https://nodesk.co/remote-companies/assets/logos/axios.54410526f1d4f722aa17e00d7ecc8c9c10902c40b6ede87002fca4070d2bb053.jpg" width="48" height="48" alt="Axios Logo" />
       <br>Axios
     </td>
     <td align="center" width="96">

@@ -52,5 +52,9 @@ npm run start
         <img src="https://res.cloudinary.com/practicaldev/image/fetch/s--AlWXrRzS--/c_imagga_scale,f_auto,fl_progressive,h_1080,q_auto,w_1080/https://dev-to-uploads.s3.amazonaws.com/i/3uy5od7tw2jf4fh7ldlv.jpeg" width="68" height="68" alt="GitHub Pages Logo" />
       <br>GitHub Pages
     </td>
+    <td align="center" width="160">
+        <img src="https://logos-world.net/wp-content/uploads/2021/03/Google-Fonts-Logo.png" width="68" height="68" alt="Google Fonts Logo" />
+      <br>Google Fonts
+    </td>
   </tr>
 </table>

@@ -1,4 +1,4 @@
-![Toksan Logo](toksan-anime/assets/icons/toksan_logo.svg)
+![Toksan Logo](https://raw.githubusercontent.com/AC59852/toksan-anime/8b0c0ef6b120859af3c972dbd835c399f88eb24e/assets/icons/toksan_logo.svg)
 
 # Toksan Anime
 

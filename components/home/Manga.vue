@@ -1,7 +1,9 @@
 <template>
   <div :style="'background-image: url(' + manga.image + ')'">
-    <h3>{{ manga.name }}:</h3>
-    <h4>{{ manga.chapter }}</h4>
+    <span>
+      <h3>{{ manga.name }}:</h3>
+      <h4>Chapter {{ manga.chapter }}</h4>
+    </span>
   </div>
 </template>
 

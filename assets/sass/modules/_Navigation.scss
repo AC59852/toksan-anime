@@ -4,6 +4,7 @@ header {
     bottom: 0;
     left: 0;
     background-color: #181818;
+    z-index: 99999;
     ul {
         display: flex;
         justify-content: space-evenly;

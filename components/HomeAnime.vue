@@ -1,7 +1,10 @@
 <template lang="">
-    <div>
-       <Anime v-for="(anime, index) in animeList" :anime="anime" :key="index" />
-    </div>
+    <section id="homeAnime">
+        <div class="latestTitle"><h2>Latest Anime Releases</h2><span class="latestLink">See All</span></div>
+        <div class="homeContent">
+            <Anime v-for="(anime, index) in animeList" :anime="anime" :key="index" :class="'anime' + anime.id"/>
+        </div>
+    </section>
 </template>
 <script>
 import axios from 'axios'

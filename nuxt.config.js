@@ -48,6 +48,15 @@ export default {
           {set: '@fortawesome/free-solid-svg-icons',
           icons: ['faSearch']
           },
+          {set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faFacebookF']
+          },
+          {set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faInstagram']
+          },
+          {set: '@fortawesome/free-brands-svg-icons',
+          icons: ['faTwitter']
+          },
       ]
    }]
   ],

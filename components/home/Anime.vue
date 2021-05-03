@@ -2,7 +2,7 @@
   <div :style="'background-image: url(' + anime.image + ')'">
     <span>
       <h3>{{ anime.name }}:</h3>
-      <h4>{{ anime.episode }}</h4>
+      <h4>Episode {{ anime.episode }}</h4>
     </span>
   </div>
 </template>

@@ -13,9 +13,20 @@ header {
         li {
             a {
                 font-size: 24px;
-                svg {
+                svg, path {
                     color: white;
-                }    
+                    fill: transparent;
+                    stroke: white;
+                    stroke-width: 20;
+                    transition: all 0.6s ease;
+                }
+                
+                &.nuxt-link-exact-active {
+                    svg, path{
+                        fill: white;
+                        stroke: transparent;
+                    }
+                }
             }
         }
     }

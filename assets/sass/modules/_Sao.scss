@@ -2,7 +2,7 @@
 
     &__hero {
         height: 100vh;
-        background-image: url("https://bit.ly/2RnuFvz");
+        background-image: url("https://bit.ly/2QRwWzq");
     }
 
     &__hero, &__content {
@@ -16,7 +16,8 @@
         &--0 {
             padding-top: 53px;
             height: 70vh;
-            background-image: url("https://bit.ly/3vEzjE8");
+            background-image: url("https://bit.ly/3b8Dro7");
+            max-height: 520px;
         }
     }
 
@@ -60,14 +61,6 @@
         }
     }
 
-    &__para {
-        line-height: 140%;
-
-        &--white {
-            color: white;
-        }
-    }
-
     &__quote {
         display: block;
     }
@@ -76,8 +69,17 @@
         font-family: $para-font;
         font-weight: 600;
         font-size: 13px;
-        width: 270px;
+        width: 90%;
         margin: 30px auto 0;
+    }
+
+    &__para {
+        line-height: 140%;
+
+        &--white {
+            color: white;
+            width: 300px;
+        }
     }
 }
 

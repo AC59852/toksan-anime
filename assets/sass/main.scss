@@ -1,8 +1,20 @@
 @import './modules/_Vars.scss';
 @import './modules/_Navigation.scss';
 @import './modules/_Home.scss';
+@import './modules/_Sao.scss';
+
+@font-face {
+    font-family: 'saoReg';
+    src: local("saoReg"),
+      url("~/assets/fonts/saoReg.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'saoBold';
+    src: local("saoBold"),
+      url("~/assets/fonts/saoBold.woff") format("woff");
+}
 
 html {
-    max-width: 320px;
     margin: 0 auto;
 }

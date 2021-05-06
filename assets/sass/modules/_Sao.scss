@@ -1,0 +1,93 @@
+.sao {
+
+    &__hero {
+        height: 100vh;
+        background-image: url("https://bit.ly/2RnuFvz");
+    }
+
+    &__hero, &__content {
+        background-size: cover;
+        background-position: center;
+    }
+
+    &__content {
+        margin: 73px 0;
+
+        &--0 {
+            padding-top: 53px;
+            height: 70vh;
+            background-image: url("https://bit.ly/3vEzjE8");
+        }
+    }
+
+    &__image {
+        width: 95%;
+        display: flex;
+        align-items: flex-start;
+        margin: 0 auto;
+
+        &--character {
+            height: 534px;
+            object-fit: contain;
+        }
+    }
+
+    &__heading {
+        font-family: $sao-heading;
+        text-align: center;
+        font-size: 32px;
+        position: relative;
+        margin-bottom: 30px;
+
+        &::after {
+            content: '';
+            background-color: black;
+            height: 2px;
+            position: absolute;
+            width: 28px;
+            top: 125%;
+            left: 50%;
+            transform: translate(-50%, 0);
+        }
+
+        &--white {
+            color: white;
+            margin-bottom: 40px;
+
+            &::after {
+                background-color: white;
+            }
+        }
+    }
+
+    &__para {
+        line-height: 140%;
+
+        &--white {
+            color: white;
+        }
+    }
+
+    &__quote {
+        display: block;
+    }
+
+    &__para, &__quote {
+        font-family: $para-font;
+        font-weight: 600;
+        font-size: 13px;
+        width: 270px;
+        margin: 30px auto 0;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .sao {
+        &__hero {
+            background-image: url("~/assets/images/sao/1122002.jpg");
+        }
+        &__content--0 {
+            background-image: url("~/assets/images/sao/tablet.webp");
+        }
+    }
+}

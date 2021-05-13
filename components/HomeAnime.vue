@@ -12,7 +12,7 @@ import Anime from './home/Anime.vue'
 export default {
     data () {
         return {
-            api: process.env.HOME_ANIME,
+            api: "https://api.npoint.io/4d4a367338f89fe81bb5/anime",
             apiContent: []
         }
     },

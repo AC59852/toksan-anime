@@ -35,8 +35,8 @@ export default {
       mobile: null,
       tablet: null,
 
-      api: process.env.SAO_CONTENT,
-      apiChar: process.env.SAO_CHARACTERS,
+      api: "https://api.npoint.io/4d4a367338f89fe81bb5/sao/content",
+      apiChar: "https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters",
 
       apiContent: [],
       characters: [],

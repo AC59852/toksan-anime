@@ -19,7 +19,6 @@
 export default {
   data() {
     return {
-      STRIPE_SECET: process.env.SAO_CHARACTERS,
 
       asideIcons: [
         {id: 0, icon: 'facebook-f', link: 'https://facebook.com'},
@@ -29,8 +28,5 @@ export default {
     }
   },
 
-  mounted() {
-    console.log(this.STRIPE_SECET)
-  }
 }
 </script>

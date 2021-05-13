@@ -2,7 +2,7 @@
     <section id="homeManga">
         <div class="latestTitle"><h2>Latest Manga Releases</h2><span class="latestLink">See All</span></div>
         <div class="homeContent">
-            <Manga v-for="(manga, index) in mangaList" :manga="manga" :key="index" :class="'manga' + manga.id"/>
+            <Manga v-for="(manga, index) in apiContent" :manga="manga" :key="index" :class="'manga' + manga.id"/>
         </div>
     </section>
 </template>
@@ -17,24 +17,13 @@ export default {
     
     data () {
         return {
-            mangaList: []
+            api: "https://api.npoint.io/4d4a367338f89fe81bb5/manga",
+            apiContent: []
         }
     },
     
-    async created() {
-        const config = {
-            headers: {
-                'Accept': 'application/json'
-            }
-        }
-        try {
-            const res = await axios.get("https://api.npoint.io/4d4a367338f89fe81bb5/manga", config);
-
-            this.mangaList = res.data;
-            console.log(res.data)
-        } catch (err) {
-            console.log(err)
-        }
+    created() {
+       this.apiPopulate()
     }
 }
 </script>

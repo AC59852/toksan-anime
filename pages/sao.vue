@@ -14,7 +14,7 @@
         <p class="sao__para sao__para--white">"Sword Art Online (SAO)" has generated worldwide buzz, and on its official launch day, 10’000 players immerse themselves in the virtual world, only to find out that none of them can escape.</p>
       </div>
     </section>
-    <SaoContent v-for="block in blocks" :key="block.id" :block="block" :tablet="tablet" :mobile="mobile" :class="'sao__content sao__content__' + block.id"/>
+    <SaoContent v-for="block in apiContent" :key="block.id" :block="block" :tablet="tablet" :mobile="mobile" :class="'sao__content sao__content__' + block.id"/>
     <div @click="changeCharacter()">Click Me</div>
     <section class="sao__characters sao__content">
       <h2 class="sao__heading sao__name" v-if="mobile">{{ currentCharacter.name }}</h2>
@@ -28,7 +28,6 @@
 </template>
 
 <script>
-import axios from 'axios'
 
 export default {
   data() {
@@ -36,7 +35,10 @@ export default {
       mobile: null,
       tablet: null,
 
-      blocks: [],
+      api: "https://api.npoint.io/4d4a367338f89fe81bb5/sao/content",
+      apiChar: "https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters",
+
+      apiContent: [],
       characters: [],
 
       currentId: 0,
@@ -45,23 +47,9 @@ export default {
     }
   },
 
-  async created() {
-    const config = {
-      headers: { 'Accept': 'application/json' }
-    }
-
-    try {
-      const resContent = await axios.get("https://api.npoint.io/4d4a367338f89fe81bb5/sao/content", config);
-
-      const resCharacters = await axios.get("https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters")
-
-      this.blocks = resContent.data;
-      this.characters = resCharacters;
-      this.currentCharacter = this.characters.data[0]
-
-      console.log(this.characters.length)
-    } catch (err) { console.log(err) }
-
+  created() {
+    this.apiPopulate()
+    this.charPopulate()
   },
 
   mounted() {

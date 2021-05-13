@@ -19,12 +19,18 @@
 export default {
   data() {
     return {
+      STRIPE_SECET: process.env.SAO_CHARACTERS,
+
       asideIcons: [
         {id: 0, icon: 'facebook-f', link: 'https://facebook.com'},
         {id: 1, icon: 'instagram', link: 'https://instagram.com'},
         {id: 2, icon: 'twitter', link: 'https://twitter.com'},
       ]
     }
+  },
+
+  mounted() {
+    console.log(this.STRIPE_SECET)
   }
 }
 </script>

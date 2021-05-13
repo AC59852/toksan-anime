@@ -99,6 +99,14 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+
+        &__logo {
+            display: block;
+            margin: 0 auto;
+            padding-top: 10%;
+            width: 65%;
+        }
+
         &__content {
             background-image: none;
             display: flex;

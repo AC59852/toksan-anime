@@ -1,9 +1,13 @@
+const env = require('dotenv').config()
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   target: 'static',
   router: {
     base: '/toksan-anime/'
   },
+
+  env: env.parsed,
   
   head: {
     title: 'toksan-anime',
@@ -25,6 +29,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    '~/plugins/mixinCommonMethods'
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
@@ -78,8 +83,10 @@ export default {
 
   googleFonts: {
     families: {
+      Heebo: [300, 400, 500, 600, 700, 800],
+      Spartan: [300, 400, 500, 600, 700, 800],
       Assistant: [300, 400, 500, 600, 700, 800],
-      Spartan: [400, 500, 600, 700, 800]
+      'Open+Sans': [400, 500, 600, 700, 800]
     }
   },
 }

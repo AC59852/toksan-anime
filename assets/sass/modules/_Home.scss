@@ -21,7 +21,7 @@
                 width: 255px;
                 text-align: center;
                 color: white;
-                font-size: 30px;
+                font-size: 26px;
                 font-weight: 800;
                 background-color: $bck-black;
                 padding: 9px 0;
@@ -37,7 +37,7 @@
                 justify-content: center;
                 a {
                     font-family: $para-font;
-                    font-size: 12px;
+                    font-size: 16px;
                     font-weight: 800;
                     display: flex;
                     color: white;
@@ -61,7 +61,6 @@
                     span {
                         flex: 1 0 auto;
                         margin-right: 6px;
-                        margin-top: 3px;
                     }
                     img {
                         flex: 0 1 auto;
@@ -81,23 +80,25 @@
 
             h2 {
               font-family: $heading-font;
-              font-size: 20px;
+              font-size: 18px;
               font-weight: 800;
             }
 
             span {
                 font-family: $para-font;
-                font-size: 12px;
+                font-size: 14px;
                 font-weight: 700;
                 position: relative;
-                margin-right: 30px;
+                margin-right: 5px;
+                width: 45px;
 
                 &::after {
+                    display: none;
                     content: '';
                     position: absolute;
                     top: 0;
                     right: 0;
-                    transform: translate(20px, -5px);
+                    transform: translate(20px, -2px);
                     background-image: url('~/assets/icons/chevron-right.svg');
                     background-repeat: no-repeat;
                     background-size: contain;

@@ -78,7 +78,7 @@ export default {
 
     this.$nextTick(function() {
       window.addEventListener('resize', this.getWindowWidth);
-  })
+    })
   },
 
   methods: {

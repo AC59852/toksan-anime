@@ -1,6 +1,7 @@
 <template>
   <header>
       <nav>
+          <nuxt-link v-if="desktop" to="/"><img src="~/assets/icons/toksan_logo_site.svg" alt="Toksan Anime Logo"></nuxt-link>
           <ul>
               <li v-for="link in links" :key="link.id">
                   <nuxt-link :to="link.route" v-if="mobile"><fa :icon="['fas', link.icon]" /></nuxt-link>
@@ -15,8 +16,8 @@
 export default {
     data () {
         return {
-            mobile: true,
-            desktop: null,
+            mobile: null,
+            desktop: true,
 
             links: [
                 {id: 0, name: 'Home', icon: 'home', route: '/'},
@@ -24,6 +25,32 @@ export default {
                 {id: 2, name: 'Popular', icon: 'fire-alt', route: '/popular'},
                 {id: 3, name: 'Books', icon: 'book', route: '/books'},
             ]
+        }
+    },
+
+    mounted() {
+         if (window.innerWidth <= 948) {
+                this.mobile = true
+                this.desktop = false
+            } else if (window.innerWidth >= 949) {
+                this.mobile = false
+                this.desktop = true
+            }
+
+        this.$nextTick(function() {
+            window.addEventListener('resize', this.getWindowWidth);
+        })
+    },
+
+    methods: {
+        getWindowWidth() {
+            if (window.innerWidth <= 948) {
+                this.mobile = true
+                this.desktop = false
+            } else if (window.innerWidth >= 949) {
+                this.mobile = false
+                this.desktop = true
+            }
         }
     }
 }

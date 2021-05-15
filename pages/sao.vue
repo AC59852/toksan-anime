@@ -1,27 +1,51 @@
 <template>
   <section class="anime sao">
     <section class="sao__hero">
-      <img class="sao__logo" src="~/assets/images/sao/sao_logo.svg" alt="Sword Art Online Logo" >
+      <img class="sao__logo" src="~/assets/images/sao/sao_logo.svg" alt="Sword Art Online Logo">
     </section>
     <section class="sao__content sao__content--0">
-      <h1 v-if="mobile" class="sao__heading sao__heading--white">The World of Swords</h1>
+      <h1 v-if="mobile" class="sao__heading sao__heading--white">
+        The World of Swords
+      </h1>
       <picture v-if="tablet" class="sao__image">
         <img src="https://res.cloudinary.com/ap-creative/image/upload/v1620500325/anime/sao/sao_asuna_aincrad_p9ajyj.jpg" alt="Image of The World of the Swords">
       </picture>
       <div class="sao__text sao__text--0">
-        <h1 v-if="tablet || desktop" class="sao__heading sao__heading--white">The World of Swords</h1>
-        <p class="sao__para sao__para--white">In the year 2022, a next generation game device known as “NerveGear” has been developed, making Full Dives into a virtual dimension possible. “NerveGear” is the world’s first true VRMMORPG device.</p>
-        <p class="sao__para sao__para--white">"Sword Art Online (SAO)" has generated worldwide buzz, and on its official launch day, 10’000 players immerse themselves in the virtual world, only to find out that none of them can escape.</p>
+        <h1 v-if="tablet || desktop" class="sao__heading sao__heading--white">
+          The World of Swords
+        </h1>
+        <p class="sao__para sao__para--white">
+          In the year 2022, a next generation game device known as “NerveGear” has been developed, making Full Dives into a virtual dimension possible. “NerveGear” is the world’s first true VRMMORPG device.
+        </p>
+        <p class="sao__para sao__para--white">
+          "Sword Art Online (SAO)" has generated worldwide buzz, and on its official launch day, 10’000 players immerse themselves in the virtual world, only to find out that none of them can escape.
+        </p>
       </div>
     </section>
-    <SaoContent v-for="block in apiContent" :key="block.id" :block="block" :tablet="tablet" :mobile="mobile" :desktop="desktop" :class="'sao__content sao__content__' + block.id"/>
-    <div @click="changeCharacter()">Click Me</div>
+    <SaoContent
+      v-for="block in apiContent"
+      :key="block.id"
+      :block="block"
+      :tablet="tablet"
+      :mobile="mobile"
+      :desktop="desktop"
+      :class="'sao__content sao__content__' + block.id"
+    />
+    <div @click="changeCharacter()">
+      Click Me
+    </div>
     <section class="sao__characters sao__content">
-      <h2 class="sao__heading sao__name" v-if="mobile">{{ currentCharacter.name }}</h2>
+      <h2 v-if="mobile" class="sao__heading sao__name">
+        {{ currentCharacter.name }}
+      </h2>
       <img class="sao__image sao__image--character" :src="currentCharacter.image" :alt="'photo of ' + currentCharacter.name + ' from Sword Art Online'">
       <div class="sao__text">
-        <h2 class="sao__heading sao__name" v-if="tablet || desktop">{{ currentCharacter.name }}</h2>
-        <p class="sao__para sao__para--char">{{ currentCharacter.para }}</p>
+        <h2 v-if="tablet || desktop" class="sao__heading sao__name">
+          {{ currentCharacter.name }}
+        </h2>
+        <p class="sao__para sao__para--char">
+          {{ currentCharacter.para }}
+        </p>
       </div>
     </section>
   </section>
@@ -30,14 +54,14 @@
 <script>
 
 export default {
-  data() {
+  data () {
     return {
       mobile: null,
       tablet: null,
       desktop: null,
 
-      api: "https://api.npoint.io/4d4a367338f89fe81bb5/sao/content",
-      apiChar: "https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters",
+      api: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/content',
+      apiChar: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters',
 
       apiContent: [],
       characters: [],
@@ -48,41 +72,39 @@ export default {
     }
   },
 
-  created() {
+  created () {
     this.apiPopulate()
     this.charPopulate()
   },
 
-  mounted() {
-
+  mounted () {
     if (window.innerWidth >= 768) {
-      window.addEventListener("scroll", function() {
-        document.querySelector(".sao__hero").style.opacity = 1 - +window.pageYOffset/4550+ ''
-        })
+      window.addEventListener('scroll', function () {
+        document.querySelector('.sao__hero').style.opacity = 1 - +window.pageYOffset / 4550 + ''
+      })
     }
 
     if (window.innerWidth <= 767) {
-        this.mobile = true
-        this.tablet = false
-        this.desktop = false
-      } else if (window.innerWidth >= 768 && window.innerWidth <= 1199) {
-        this.tablet = true
-        this.mobile = false
-        this.desktop = false
+      this.mobile = true
+      this.tablet = false
+      this.desktop = false
+    } else if (window.innerWidth >= 768 && window.innerWidth <= 1199) {
+      this.tablet = true
+      this.mobile = false
+      this.desktop = false
+    } else if (window.innerWidth >= 1199) {
+      this.mobile = false
+      this.tablet = false
+      this.desktop = true
+    }
 
-      } else if (window.innerWidth >= 1199) {
-         this.mobile = false
-         this.tablet = false
-         this.desktop = true
-        }
-
-    this.$nextTick(function() {
-      window.addEventListener('resize', this.getWindowWidth);
+    this.$nextTick(function () {
+      window.addEventListener('resize', this.getWindowWidth)
     })
   },
 
   methods: {
-    changeCharacter() {
+    changeCharacter () {
       this.currentId += 1
 
       if (this.currentId >= this.characters.data.length) {
@@ -93,13 +115,7 @@ export default {
       }
     },
 
-    test() {
-      if(this.mobile = null) {
-        console.log("test")
-      }
-    },
-
-    getWindowWidth() {
+    getWindowWidth () {
       if (window.innerWidth <= 767) {
         this.mobile = true
         this.tablet = false
@@ -109,12 +125,12 @@ export default {
         this.mobile = false
         this.desktop = false
       } else if (window.innerWidth >= 1199) {
-         this.desktop = true
-         this.mobile = false
-         this.tablet = false
-        }
+        this.desktop = true
+        this.mobile = false
+        this.tablet = false
+      }
     }
-  
+
   }
 }
 </script>

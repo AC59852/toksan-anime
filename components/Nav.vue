@@ -23,7 +23,7 @@ export default {
   data () {
     return {
       mobile: null,
-      desktop: true,
+      desktop: null,
 
       links: [
         { id: 0, name: 'Home', icon: 'home', route: '/' },

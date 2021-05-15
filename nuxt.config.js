@@ -5,6 +5,10 @@ export default {
     base: '/toksan-anime/'
   },
 
+  server: {
+    jost: '0'
+  },
+
   head: {
     title: 'toksan-anime',
     meta: [
@@ -35,31 +39,37 @@ export default {
   buildModules: [
     '@nuxtjs/google-fonts',
     ['nuxt-fontawesome', {
-      component: 'fa', //customize component name
+      component: 'fa', // customize component name
       imports: [{
-          set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faFireAlt']
-          },
-          {set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faBook']
-          },
-          {set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faHome']
-          },
-          {set: '@fortawesome/free-solid-svg-icons',
-          icons: ['faSearch']
-          },
-          {set: '@fortawesome/free-brands-svg-icons',
-          icons: ['faFacebookF']
-          },
-          {set: '@fortawesome/free-brands-svg-icons',
-          icons: ['faInstagram']
-          },
-          {set: '@fortawesome/free-brands-svg-icons',
-          icons: ['faTwitter']
-          },
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faFireAlt']
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faBook']
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faHome']
+      },
+      {
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faSearch']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['faFacebookF']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['faInstagram']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['faTwitter']
+      }
       ]
-   }]
+    }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -84,5 +94,5 @@ export default {
       Assistant: [300, 400, 500, 600, 700, 800],
       'Open+Sans': [400, 500, 600, 700, 800]
     }
-  },
+  }
 }

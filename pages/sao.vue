@@ -84,22 +84,10 @@ export default {
       })
     }
 
-    if (window.innerWidth <= 767) {
-      this.mobile = true
-      this.tablet = false
-      this.desktop = false
-    } else if (window.innerWidth >= 768 && window.innerWidth <= 1199) {
-      this.tablet = true
-      this.mobile = false
-      this.desktop = false
-    } else if (window.innerWidth >= 1199) {
-      this.mobile = false
-      this.tablet = false
-      this.desktop = true
-    }
+    this.checkWidth()
 
     this.$nextTick(function () {
-      window.addEventListener('resize', this.getWindowWidth)
+      window.addEventListener('resize', this.checkWidth)
     })
   },
 
@@ -114,22 +102,6 @@ export default {
         this.currentCharacter = this.characters[this.currentId]
       }
     },
-
-    getWindowWidth () {
-      if (window.innerWidth <= 767) {
-        this.mobile = true
-        this.tablet = false
-        this.desktop = false
-      } else if (window.innerWidth >= 768 && window.innerWidth <= 1199) {
-        this.tablet = true
-        this.mobile = false
-        this.desktop = false
-      } else if (window.innerWidth >= 1199) {
-        this.desktop = true
-        this.mobile = false
-        this.tablet = false
-      }
-    }
 
   }
 }

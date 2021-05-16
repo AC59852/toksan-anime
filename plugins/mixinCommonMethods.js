@@ -13,7 +13,6 @@ Vue.mixin({
         const resContent = await axios.get(this.api, config)
 
         this.apiContent = resContent.data
-        console.log(this.apiContent)
       } catch (err) { console.log(err) }
     },
 
@@ -24,8 +23,32 @@ Vue.mixin({
 
       try {
         const resCharacters = await axios.get(this.apiChar, config)
-        this.characters = resCharacters
-        this.currentCharacter = this.characters.data[0]
+        console.log(resCharacters.data)
+        this.characters = resCharacters.data
+
+        if(this.currentCharacter == null) {
+          console.log("No First Character")
+        } else {
+          this.currentCharacter = this.characters[0]
+        }
+
+        if(this.items) {
+          this.items = this.characters
+        }
+
+      } catch (err) { console.log(err) }
+    },
+
+    async epiPopulate () {
+      const config = {
+        headers: { Accept: 'application/json' }
+      }
+
+      try {
+        const resEpisodes = await axios.get(this.apiEpi, config)
+        console.log(resEpisodes.data)
+        this.episodes = resEpisodes.data
+
       } catch (err) { console.log(err) }
     }
   }

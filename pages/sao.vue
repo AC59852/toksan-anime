@@ -107,11 +107,11 @@ export default {
     changeCharacter () {
       this.currentId += 1
 
-      if (this.currentId >= this.characters.data.length) {
+      if (this.currentId >= this.characters.length) {
         this.currentId = 0
-        this.currentCharacter = this.characters.data[0]
+        this.currentCharacter = this.characters[0]
       } else {
-        this.currentCharacter = this.characters.data[this.currentId]
+        this.currentCharacter = this.characters[this.currentId]
       }
     },
 

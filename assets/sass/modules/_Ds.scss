@@ -1,0 +1,117 @@
+.ds {
+    max-width: 320px;
+    margin: 0 auto;
+
+    // Hero content
+    &__hero {
+        background-image: url('~/assets/images/ds/bck.png');
+        background-size: cover;
+        overflow: hidden;
+        height: 100vh;
+    }
+
+    &__logo {
+        width: 47%;
+        max-width: 209px;
+        display: block;
+        margin: 0 auto;
+        padding-top: 25px;
+    }
+
+    &__btns {
+        display: flex;
+        justify-content: center;
+    }
+
+    &__heroImg {
+        width: 100%;
+    }
+    // End of Hero content
+
+    // General content (-- is specific stuff) 
+    &__btn {
+        display: flex;
+        width: auto;
+        border-radius: 4px;
+        font: $ds-heading;
+        color: white;
+        background-color: #181818;
+        margin: 0 10px;
+        padding: 4px 8px;
+        cursor: pointer;
+
+        img { width: 18px; margin-left: 9px;}
+
+        &--small {
+            font-size: 12px;
+            text-transform: uppercase;
+        }
+
+        &--filter {
+            width: 185px;
+            text-align: center;
+            justify-content: center;
+            margin: 0;
+            padding: 10px 6px;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.164);
+        }
+    }
+
+    &__heading {
+        font: $ds-heading;
+
+        &--center {
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        &--eb {
+            font-weight: 800;
+        }
+
+        &--content {
+            margin-top: 8px;
+        }
+    }
+
+    &__content {
+        width: 90%;
+        max-width: 392px;
+        margin: 25px auto;
+    }
+
+    &__image {
+        width: 100%;
+
+        &--item {
+            width: 68px;
+        }
+    }
+
+    &__para {
+        font: $ds-para;
+
+        &--content {
+          margin: 2px 0 15px;  
+        }
+    }
+
+    &__list {
+        margin-top: 15px;
+        margin-bottom: 100px;
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        width: 247px;
+        margin: 10px 0;
+    }
+
+    &__name {
+        font: $ds-para;
+        font-size: 14px;
+        font-weight: 600;
+        color: #8F8F8F;
+    }
+}

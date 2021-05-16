@@ -5,10 +5,6 @@ export default {
     base: '/toksan-anime/'
   },
 
-  server: {
-    jost: '0'
-  },
-
   head: {
     title: 'toksan-anime',
     meta: [

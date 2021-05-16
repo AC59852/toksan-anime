@@ -50,6 +50,22 @@ Vue.mixin({
         this.episodes = resEpisodes.data
 
       } catch (err) { console.log(err) }
+    },
+
+    checkWidth() {
+      if (window.innerWidth <= 767) {
+        this.mobile = true
+        this.tablet = false
+        this.desktop = false
+      } else if (window.innerWidth >= 768 && window.innerWidth <= 1199) {
+        this.tablet = true
+        this.mobile = false
+        this.desktop = false
+      } else if (window.innerWidth >= 1199) {
+        this.mobile = false
+        this.tablet = false
+        this.desktop = true
+      }
     }
   }
 })

@@ -1,7 +1,4 @@
 .ds {
-    max-width: 320px;
-    margin: 0 auto;
-
     // Hero content
     &__hero {
         background-image: url('~/assets/images/ds/bck.png');
@@ -11,11 +8,11 @@
     }
 
     &__logo {
-        width: 47%;
-        max-width: 209px;
+        width: 53%;
         display: block;
         margin: 0 auto;
         padding-top: 25px;
+        max-width: 384px;
     }
 
     &__btns {
@@ -31,6 +28,7 @@
     // General content (-- is specific stuff) 
     &__btn {
         display: flex;
+        align-items: center;
         width: auto;
         border-radius: 4px;
         font: $ds-heading;
@@ -113,5 +111,194 @@
         font-size: 14px;
         font-weight: 600;
         color: #8F8F8F;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .ds {
+        &__hero {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        &__logoCon {
+            flex: 0 1 auto;
+            height: 500px;
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        &__logoCon, &__heroImg {
+            margin-top: 75px;
+        }
+
+        &__logo {
+            width: 57%;
+        }
+
+        &__heroImg {
+            width: 50%;
+            margin-left: -10%;
+        }
+
+        &__heading {
+            &--eb {
+                order: 1;
+                margin: 0;
+                font-size: 22px;
+            }
+
+            &--content {
+                margin-top: 0;
+                font-size: 24px;
+            }
+
+            &--cards {
+                margin-left: 5%;
+            }
+        }
+
+        &__para {
+            font-size: 15px;
+            line-height: 135%;
+
+            &--content {
+                margin: 16px 0 15px;
+            }
+        }
+
+        &__btns {
+            &--hero { margin: 30px 0; }
+        }
+
+        &__btn {
+            padding: 10px 12px;
+            font-size: 16px;
+
+            img { width: 23px; }
+
+            &--small {
+                font-size: 14px;
+            }
+
+            &--filter {
+                width: 30%;
+                max-width: 180px;
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            max-width: none;
+            width: 100%;
+            margin: 50px 0;
+
+            &--col {
+                flex-direction: column;
+            }
+
+            &--list {
+                width: 50%;
+            }
+
+            &--2 {
+                align-items: initial;
+            }
+
+            &--cards {
+                width: 50%;
+                max-width: 630px;
+            }
+        }
+
+        &__image {
+            width: 440px;
+
+            &--item {
+                width: 72px;
+            }
+        }
+
+        &__text {
+            width: 410px;
+            padding: 30px;
+            box-shadow: 0 6px 12px -3px rgba($color: #000000, $alpha: 0.25);
+
+            &--item {
+                padding: 0;
+                width: auto;
+                box-shadow: none;
+            }
+        }
+
+        &__list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        &__item {
+            width: 230px;
+            margin: 0 0 10px;
+        }
+
+        &__cards {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        &__heading--cards, &__btns--list {
+            margin-bottom: 25px;
+        }
+
+        &__card {
+            display: flex;
+            flex-direction: column;
+            flex: 0 1 auto;
+            align-items: center;
+            width: 145px;
+            height: 190px;
+            border-radius: 2px;
+            margin-left: 10px;
+            background-color: #FCFCFC;
+            box-shadow: 0px 6px 12px -2px rgba(0, 0, 0, 0.25);
+
+            h3 {
+                font-size: 20px;
+                padding: 25px 0 0;
+                position: relative;
+                margin-bottom: 65px;
+
+                &::after {
+                    content: "";
+                    width: 70px;
+                    background-color: #EEEEEE;
+                    height: 2px;
+                    position: absolute;
+                    top: 150%;
+                    left: 50%;
+                    transform: translate(-50%, 0);
+                }
+            }
+            
+            h3, span:nth-child(3) {
+                font-weight: 700;
+                font-family: $ds-numbers-text;
+            }
+
+            span:nth-child(2) {
+                font-size: 46px;
+                font-weight: 800;
+                font-family: $ds-numbers;
+            }
+
+            span:nth-child(3) {
+                font-size: 14px;
+            }
+        }        
     }
 }

@@ -21,7 +21,7 @@ export default {
     return {
       title: "Toksan Anime",
       description: "This is a test description",
-      image: "https://raw.githubusercontent.com/AC59852/toksan-anime/main/assets/icons/toksan_logo.svg",
+      image: "https://ac59852.github.io/toksan-anime/app-icon.png",
 
       asideIcons: [
         { id: 0, icon: 'facebook-f', link: 'https://facebook.com' },

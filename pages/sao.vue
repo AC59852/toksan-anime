@@ -62,7 +62,7 @@ export default {
 
       title: 'Toksan Anime - Sword Art Online',
       description: 'Test Sword Art Online Description',
-      image: 'https://raw.githubusercontent.com/AC59852/toksan-anime/main/assets/icons/toksan_logo.svg',
+      image: 'https://ac59852.github.io/toksan-anime/app-icon.png',
 
       api: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/content',
       apiChar: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters',

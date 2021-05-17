@@ -60,6 +60,10 @@ export default {
       tablet: null,
       desktop: null,
 
+      title: 'Toksan Anime - Sword Art Online',
+      description: 'Test Sword Art Online Description',
+      image: 'https://raw.githubusercontent.com/AC59852/toksan-anime/main/assets/icons/toksan_logo.svg',
+
       api: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/content',
       apiChar: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters',
 
@@ -69,6 +73,59 @@ export default {
       currentId: 0,
 
       currentCharacter: {}
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.image
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.title
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.image
+        },
+        {
+          hid: 'og:image:alt',
+          name: 'og:image:alt',
+          content: this.title
+        },
+      ]
     }
   },
 

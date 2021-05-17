@@ -52,6 +52,7 @@
 </template>
 
 <script>
+import ogImage from '@/assets/images/fb.png'
 
 export default {
   data () {
@@ -118,7 +119,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.image
+          content: this.BASE_URL + ogImage
         },
         {
           hid: 'og:image:alt',

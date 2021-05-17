@@ -52,7 +52,6 @@
 </template>
 
 <script>
-import ogImage from '@/assets/images/fb.png'
 
 export default {
   data () {
@@ -64,6 +63,7 @@ export default {
       title: 'Toksan Anime - Sword Art Online',
       description: 'Test Sword Art Online Description',
       image: 'https://ac59852.github.io/toksan-anime/app-icon.png',
+      ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 
       api: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/content',
       apiChar: 'https://api.npoint.io/4d4a367338f89fe81bb5/sao/characters',
@@ -119,7 +119,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.BASE_URL + ogImage
+          content: this.ogImage
         },
         {
           hid: 'og:image:alt',

@@ -34,6 +34,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     '@nuxtjs/google-fonts',
+    '@nuxtjs/google-analytics',
     ['nuxt-fontawesome', {
       component: 'fa', // customize component name
       imports: [{
@@ -96,5 +97,15 @@ export default {
       Assistant: [300, 400, 500, 600, 700, 800],
       'Open+Sans': [400, 500, 600, 700, 800]
     }
-  }
+  },
+
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
+  },
+
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
+  },
 }

@@ -16,12 +16,14 @@
 </template>
 
 <script>
+
 export default {
   data () {
     return {
       title: "Toksan Anime",
       description: "This is a test description",
       image: "https://ac59852.github.io/toksan-anime/app-icon.png",
+      ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 
       asideIcons: [
         { id: 0, icon: 'facebook-f', link: 'https://facebook.com' },
@@ -73,7 +75,7 @@ export default {
         {
           hid: 'og:image',
           name: 'og:image',
-          content: this.image
+          content: this.ogImage
         },
         {
           hid: 'og:image:alt',

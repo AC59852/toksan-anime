@@ -17,6 +17,7 @@
         <h2 class="ds__heading ds__heading--content">{{ apiContent.heading }}</h2>
         <p class="ds__para ds__para--content">{{ apiContent.para1 }}</p>
         <p class="ds__para">{{ apiContent.para2 }}</p>
+        <span class="ds__quote ds__para" v-if="tablet || desktop">&#8212; {{ apiContent.quote }}</span>
       </div>
     </section>
     <section class="ds__content ds__content--2">

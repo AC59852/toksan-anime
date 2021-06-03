@@ -9,7 +9,7 @@
           <nuxt-link v-if="mobile" :to="link.route">
             <fa :icon="['fas', link.icon]" />
           </nuxt-link>
-          <nuxt-link v-else-if="desktop" to="/">
+          <nuxt-link v-else-if="desktop" :to="link.route">
             {{ link.name }}
           </nuxt-link>
         </li>

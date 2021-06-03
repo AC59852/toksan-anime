@@ -4,6 +4,7 @@ import axios from '~/node_modules/axios'
 Vue.mixin({
 
   methods: {
+
     async apiPopulate () {
       const config = {
         headers: { Accept: 'application/json' }
@@ -13,6 +14,22 @@ Vue.mixin({
         const resContent = await axios.get(this.api, config)
 
         this.apiContent = resContent.data
+      } catch (err) { console.log(err) }
+    },
+
+    async apiPopulatePopular () {
+      const config = {
+        headers: { 
+          Accept: 'application/vnd.api+json',
+          'Content-Type': 'application/x-www-form-urlencoded'
+        
+        }
+      }
+
+      try {
+        const resContent = await axios.get(this.apiPop, config)
+        this.apiContentPop = resContent.data.data
+        console.log(this.apiContentPop)
       } catch (err) { console.log(err) }
     },
 
@@ -66,6 +83,6 @@ Vue.mixin({
         this.tablet = false
         this.desktop = true
       }
-    }
+    },
   }
 })

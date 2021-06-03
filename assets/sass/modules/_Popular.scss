@@ -1,0 +1,128 @@
+#popular {
+    margin-bottom: 50px;
+    .popAnime {
+        width: 100%;
+        background-position: center;
+        background-size: auto 102%;
+        background-repeat: no-repeat;
+        height: 221px;
+        display: flex;
+        align-items: center;
+
+        &__logo {
+            display: flex;
+            margin: 0 auto;
+            width: 85%;
+            height: 80%;
+            object-fit: contain;
+        }
+
+        &Con {
+            margin: 25px 0 65px 0;
+            .latestTitle {
+                display: flex;
+                margin-bottom: 15px;
+                margin-left: 15px;
+                justify-content: space-between;
+                align-items: flex-end;
+    
+                h2 {
+                  font-family: $heading-font;
+                  font-size: 18px;
+                  font-weight: 800;
+                }
+    
+                a {
+                    font-family: $para-font;
+                    font-size: 14px;
+                    font-weight: 700;
+                    position: relative;
+                    margin-right: 5px;
+                    width: 45px;
+                    text-decoration: none;
+                    color: black;
+    
+                    &::after {
+                        display: none;
+                        content: '';
+                        position: absolute;
+                        top: 0;
+                        right: 0;
+                        transform: translate(20px, -2px);
+                        background-image: url('~/assets/icons/chevron-right.svg');
+                        background-repeat: no-repeat;
+                        background-size: contain;
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+            }
+        }
+
+        &List {
+            display: flex;
+            overflow-x: scroll;
+            margin-bottom: 65px;
+            padding-bottom: 15px;
+
+            &::-webkit-scrollbar {
+                display: block;
+                height: 8px;
+                margin-top: 5px;
+            }
+
+            &::-webkit-scrollbar-track {
+                background: transparent;
+            }
+
+            &::-webkit-scrollbar-thumb {
+                background-color: rgba(139, 139, 139, 0.493);
+                border-radius: 200px;
+            }
+
+            &::after {
+                content: '';
+                min-width: 15px;
+                max-width: 15px;
+            }
+
+            &__item {
+                flex: 1 0 auto;
+                background-size: cover;
+                width: 135px;
+                height: 155px;
+                margin-right: 20px;
+                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.308));
+                border-radius: 4px;
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+
+                &:nth-child(1) {
+                    margin-left: 15px;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+
+                span {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    color: white;
+                    font-family: $heading-font;
+                    font-weight: 800;
+                    font-size: 14px;
+                    height: 50px;
+                    background-color: rgba(24, 24, 24, 0.94);
+
+                    h3 {
+                        line-height: 130%;
+                    }
+                }
+            }
+        }
+    }
+}

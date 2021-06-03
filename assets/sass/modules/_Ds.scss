@@ -299,128 +299,159 @@
             span:nth-child(3) {
                 font-size: 14px;
             }
-        }        
+        }
     }
+}
 
-    @media screen and (min-width: 1440px) {
+@media screen and (min-width: 1280px) {
 
-        .ds {
+    .ds {
 
-            &__hero {
-                padding: 0 60px;
-                justify-content: space-evenly;
+        &__hero {
+            padding: 0 60px;
+            justify-content: space-evenly;
+        }
+
+        &__logoCon, &__heroImg {
+            margin-top: 45px;
+        }
+
+        &__logoCon {
+            height: auto;
+        }
+
+        &__logo {
+            width: 443px;
+            max-width: none;
+            padding-top: 15px;
+        }
+
+        &__heroImg {
+            max-width: 645px;
+        }
+
+        &__image {
+           width: 48%;
+           max-width: 680px;
+
+            &--item {
+                width: 72px;
+            }
+        }
+
+        &__heading {
+            &--content {
+                font-size: 32px;
             }
 
-            &__logoCon, &__heroImg {
-                margin-top: 45px;
+            &--cards {
+                margin-left: 0;
+            }
+        }
+
+        &__para {
+            font-size: 16px;
+            line-height: 20px;
+            margin: 15px 0;
+            width: 80%;
+            color: #787777;
+        }
+
+        &__quote {
+            font-style: italic;
+            font-size: 14px;
+        }
+
+        &__text {
+            width: 40%;
+            height: 347px;
+            justify-content: center;
+            padding: 1% 4%;
+            display: flex;
+            flex-direction: column;
+
+            &--item {
+                padding: 0;
+                height: auto;
+                width: auto;
+            }
+        }
+
+        &__content {
+            max-width: 1600px;
+            width: 93%;
+            margin: 50px auto;
+            justify-content: space-between;
+            &--list {
+                width: 680px;
             }
 
-            &__logoCon {
+            &--cards {
+                max-width: none;
+                width: 50%;
+            }
+
+            &--list {
+                width: 50%;
+            }
+        }
+
+        &__btns {
+            &--list {
+                margin: -20px auto 30px;
+            }
+        }
+
+        &__cards {
+            justify-content:initial;
+        }
+
+        &__card {
+            width: 80%;
+            height: 231px;
+            margin-left: 0;
+            margin-right: 6%;
+
+            h3 {
+                font-size: 24px;
+                padding-top: 35px;
+
+                &::after { width: 93px; }
+            }
+
+            span:nth-child(2) { font-size: 50px; }
+        }
+
+        &__list {
+            justify-content: center;
+            margin-bottom: 0;
+        }
+
+        &__item {
+            margin-bottom: 15px;
+            width: 255px;
+            margin: 0 0 10px 35px;
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    .ds {
+        &__card {
+            height: 270px;
+        }
+
+        &__text {
+            height: 390px;
+
+            &--item {
                 height: auto;
             }
+        }
 
-            &__logo {
-                width: 443px;
-                max-width: none;
-                padding-top: 15px;
-            }
-
-            &__heroImg {
-                max-width: 645px;
-            }
-
-            &__image {
-                width: 625px;
-
-                &--item {
-                    width: 72px;
-                }
-            }
-
-            &__heading {
-                &--content {
-                    font-size: 32px;
-                }
-
-                &--cards {
-                    margin-left: 0;
-                }
-            }
-
-            &__para {
-                font-size: 16px;
-                line-height: 20px;
-                margin: 15px 0;
-                width: 479px;
-                color: #787777;
-            }
-
-            &__quote {
-                font-style: italic;
-                font-size: 14px;
-            }
-
-            &__text {
-                width: 525px;
-                height: 347px;
-                justify-content: center;
-                padding: 30px 52px;
-                display: flex;
-                flex-direction: column;
-
-                &--item {
-                    padding: 0;
-                    height: auto;
-                    width: auto;
-                }
-            }
-
-            &__content {
-                max-width: 1600px;
-                width: 93%;
-                margin: 50px auto;
-                justify-content: space-between;
-                &--list {
-                    width: 680px;
-                }
-
-                &--cards {
-                    max-width: 670px;
-                }
-            }
-
-            &__btns {
-                &--list {
-                    margin: -20px auto 30px;
-                }
-            }
-
-            &__card {
-                width: 193px;
-                height: 231px;
-                margin-left: 0;
-                margin-right: 30px;
-
-                h3 {
-                    font-size: 24px;
-                    padding-top: 35px;
-
-                    &::after { width: 93px; }
-                }
-
-                span:nth-child(2) { font-size: 50px; }
-            }
-
-            &__list {
-                justify-content: center;
-                margin-bottom: 0;
-            }
-
-            &__item {
-                margin-bottom: 15px;
-                width: 255px;
-                margin: 0 0 10px 35px;
-            }
+        &__para {
+            font-size: 17px;
+            line-height: 22px;
         }
     }
 }

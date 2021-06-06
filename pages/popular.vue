@@ -36,8 +36,6 @@ export default {
         this.apiPopulate();
 
         this.apiPopulatePopular();
-
-        document.querySelector("header").classList.add("picture-nav")
     },
 
     methods: {

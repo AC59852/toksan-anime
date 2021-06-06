@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <header :class="{ 'picture-nav': $route.path == '/popular' }">
     <nav>
       <nuxt-link v-if="desktop" to="/">
         <img src="~/assets/icons/toksan_logo_site.svg" alt="Toksan Anime Logo">
@@ -35,10 +35,10 @@ export default {
   },
 
   mounted () {
-    if (window.innerWidth <= 948) {
+    if (window.innerWidth <= 1023) {
       this.mobile = true
       this.desktop = false
-    } else if (window.innerWidth >= 949) {
+    } else if (window.innerWidth >= 1024) {
       this.mobile = false
       this.desktop = true
     }
@@ -50,10 +50,10 @@ export default {
 
   methods: {
     getWindowWidth () {
-      if (window.innerWidth <= 948) {
+      if (window.innerWidth <= 1023) {
         this.mobile = true
         this.desktop = false
-      } else if (window.innerWidth >= 949) {
+      } else if (window.innerWidth >= 1024) {
         this.mobile = false
         this.desktop = true
       }

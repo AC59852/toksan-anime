@@ -1,14 +1,16 @@
 <template>
   <section id="popular">
-      <CreatedAnime v-for="anime in apiContent" :key="anime.id" :anime="anime" :class="'popAnime popAnime' + anime.id"/>
-      <div class="popAnimeCon">
-          <div class="latestTitle">
-            <h2>Latest Manga Releases</h2><nuxt-link to="/" class="latestLink">
+      <div class="popAnime">
+          <CreatedAnime v-for="anime in apiContent" :key="anime.id" :anime="anime" :class="'popAnime__custom popAnime' + anime.id"/>
+      </div>
+      <div class="popAnime__con">
+          <div class="popAnime__title">
+            <h2>Popular Anime Releases</h2><nuxt-link to="/" class="latestLink">
               See All
             </nuxt-link>
           </div>
-          <div class="popAnimeList">
-            <div v-for="popular in apiContentPop" :key="popular.id" class="popAnimeList__item" :style="{backgroundImage: 'url(' + popular.attributes.posterImage.small + ')'}">
+          <div class="popAnime__list">
+            <div v-for="popular in apiContentPop" :key="popular.id" class="popAnime__item" :style="{backgroundImage: 'url(' + popular.attributes.posterImage.small + ')'}">
                 <span>
                     <h3>{{ popular.attributes.titles.en }}</h3>
                 </span>
@@ -42,9 +44,4 @@ export default {
 </script>
 
 <style>
-#popular {
-    width: 320px;
-    margin: 0 auto;
-}
-
 </style>

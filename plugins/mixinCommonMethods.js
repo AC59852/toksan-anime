@@ -29,7 +29,6 @@ Vue.mixin({
       try {
         const resContent = await axios.get(this.apiPop, config)
         this.apiContentPop = resContent.data.data
-        console.log(this.apiContentPop)
       } catch (err) { console.log(err) }
     },
 

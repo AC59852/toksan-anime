@@ -1,13 +1,16 @@
 #popular {
     margin-bottom: 50px;
     .popAnime {
-        width: 100%;
-        background-position: center;
-        background-size: auto 102%;
-        background-repeat: no-repeat;
-        height: 221px;
-        display: flex;
-        align-items: center;
+        &__custom {
+            width: 100%;
+            max-width: 414px;
+            background-position: center;
+            background-size: auto 105%;
+            background-repeat: no-repeat;
+            height: 221px;
+            display: flex;
+            align-items: center;
+        }
 
         &__logo {
             display: flex;
@@ -17,49 +20,51 @@
             object-fit: contain;
         }
 
-        &Con {
-            margin: 25px 0 65px 0;
-            .latestTitle {
-                display: flex;
-                margin-bottom: 15px;
-                margin-left: 15px;
-                justify-content: space-between;
-                align-items: flex-end;
-    
-                h2 {
-                  font-family: $heading-font;
-                  font-size: 18px;
-                  font-weight: 800;
-                }
-    
-                a {
-                    font-family: $para-font;
-                    font-size: 14px;
-                    font-weight: 700;
-                    position: relative;
-                    margin-right: 5px;
-                    width: 45px;
-                    text-decoration: none;
-                    color: black;
-    
-                    &::after {
-                        display: none;
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        right: 0;
-                        transform: translate(20px, -2px);
-                        background-image: url('~/assets/icons/chevron-right.svg');
-                        background-repeat: no-repeat;
-                        background-size: contain;
-                        width: 20px;
-                        height: 20px;
-                    }
+        &__con {
+            max-width: 1520px;
+            margin: 25px auto 65px auto;
+        }
+
+        &__title {
+            display: flex;
+            margin-bottom: 15px;
+            margin-left: 15px;
+            justify-content: space-between;
+            align-items: flex-end;
+
+            h2 {
+              font-family: $heading-font;
+              font-size: 18px;
+              font-weight: 800;
+            }
+
+            a {
+                font-family: $para-font;
+                font-size: 14px;
+                font-weight: 700;
+                position: relative;
+                margin-right: 5px;
+                width: 45px;
+                text-decoration: none;
+                color: black;
+
+                &::after {
+                    display: none;
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    transform: translate(20px, -2px);
+                    background-image: url('~/assets/icons/chevron-right.svg');
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    width: 20px;
+                    height: 20px;
                 }
             }
         }
 
-        &List {
+        &__list {
             display: flex;
             overflow-x: scroll;
             margin-bottom: 65px;
@@ -85,43 +90,230 @@
                 min-width: 15px;
                 max-width: 15px;
             }
+        }
+
+        &__item {
+            flex: 1 0 auto;
+            background-size: cover;
+            width: 135px;
+            height: 155px;
+            margin-right: 20px;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.308));
+            border-radius: 4px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+
+            &:nth-child(1) {
+                margin-left: 15px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            span {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                color: white;
+                font-family: $heading-font;
+                font-weight: 800;
+                font-size: 14px;
+                height: 50px;
+                background-color: rgba(24, 24, 24, 0.94);
+
+                h3 {
+                    line-height: 130%;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 370px) {
+    #popular {
+        .popAnime {
+            &__custom {
+                height: 270px;
+            }
 
             &__item {
-                flex: 1 0 auto;
-                background-size: cover;
-                width: 135px;
-                height: 155px;
-                margin-right: 20px;
-                filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.308));
-                border-radius: 4px;
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-end;
-
-                &:nth-child(1) {
-                    margin-left: 15px;
-                }
-
-                &:last-child {
-                    margin-right: 0;
-                }
+                width: 146px;
+                height: 175px;
 
                 span {
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    text-align: center;
-                    color: white;
-                    font-family: $heading-font;
-                    font-weight: 800;
-                    font-size: 14px;
-                    height: 50px;
-                    background-color: rgba(24, 24, 24, 0.94);
+                    padding: 0 5px;
+                }
+            }
+        }
+    }
+}
 
-                    h3 {
-                        line-height: 130%;
+@media screen and (min-width: 1024px) {
+    .picture-nav {
+        position: relative;
+        display: flex;
+        background-image: url('~/assets/images/navImg.png');
+        background-size: cover;
+        background-position: center;
+        top: 0;
+        height: 90px;
+        nav {
+          img {
+            filter: brightness(0);
+          }
+          ul {
+            li {
+              a { 
+                color: black;
+              }
+            }
+          }
+        }
+      }
+
+    #popular {
+        margin-bottom: 20px;
+        .popAnime {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &__con {
+                margin-top: 45px;
+                margin-bottom: 0;
+            }
+
+            &__custom {
+                width: 25%;
+                height: 170px;
+                background-size: auto 105%;
+            }
+
+            &__logo {
+                height: 85%;
+            }
+
+            &__title {
+                h2 {
+                    font-size: 28px;
+                    margin-left: 30px;
+                }
+
+                a {
+                    margin-right: 25px;
+                    font-size: 18px;
+                    width: 80px;
+
+                    &::after {
+                        display: block;
+                        height: 25px;
+                        width: 25px;
+                        transform: translate(0px, -4px);
                     }
                 }
+            }
+
+            &__list {
+                margin-bottom: 0;
+                padding-bottom: 30px;
+            }
+
+            &__item {
+                &:nth-child(1) {
+                    margin-left: 45px;
+                }
+
+                width: 172px;
+                height: 196px;
+                flex: 0 0 auto;
+                margin-right: 25px;
+
+                span {
+                    height: 60px;
+                    padding: 0;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1112px) {
+    #popular {
+        .popAnime {
+            &__con {
+                margin-top: 70px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1162px) {
+    #popular {
+        .popAnime {
+            &__custom {
+                background-size: 105%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1366px) {
+    #popular {
+        .popAnime {
+            &__custom {
+                background-size: 101%;
+                height: 195px;
+                max-width: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    #popular {
+        .popAnime {
+            &__custom {
+                height: 220px;
+            }
+
+            &__title {
+                a {
+                    margin-right: 25px;
+                }
+            }
+            
+            &__list {
+                overflow-x: auto;
+                &::after {
+                    position: relative;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1600px) {
+    #popular {
+        .popAnime {
+            max-width: 1920px;
+            margin: 0 auto;
+            &__custom {
+                height: 290px;
+                background-size: auto 102%;
+            }
+
+            &__title {
+                h2 {
+                    font-size: 32px;
+                }
+            }
+
+            &__item {
+                width: 202px;
+                height: 246px;
             }
         }
     }

@@ -37,11 +37,7 @@ export default {
 
         this.apiPopulatePopular();
 
-        if(!document.querySelector("header").classList.contains("picture-nav")) {
-            document.querySelector("header").classList.add("picture-nav");
-        } else {
-            return
-        }
+        document.querySelector("header").classList.add("picture-nav")
     },
 
     methods: {

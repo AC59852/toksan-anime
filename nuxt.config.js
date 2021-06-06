@@ -6,7 +6,7 @@ export default {
   },
 
   head: {
-    title: 'toksan-anime',
+    title: 'Toksan Anime',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },

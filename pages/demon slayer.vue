@@ -17,7 +17,7 @@
         <h2 class="ds__heading ds__heading--content">{{ apiContent.heading }}</h2>
         <p class="ds__para ds__para--content">{{ apiContent.para1 }}</p>
         <p class="ds__para">{{ apiContent.para2 }}</p>
-        <span class="ds__quote ds__para" v-if="tablet || desktop">&#8212; {{ apiContent.quote }}</span>
+        <span class="ds__quote ds__para" v-if="desktop">&#8212; {{ apiContent.quote }}</span>
       </div>
     </section>
     <section class="ds__content ds__content--2">
@@ -45,15 +45,17 @@ import DemonSlayerList from '~/components/demonslayer/DemonSlayerList.vue'
 import ReviewCard from '~/components/demonslayer/ReviewCard.vue'
 
 export default {
-  head: {
-    title: 'test'
-  },
-
+  
   data () {
     return {
       api: 'https://api.npoint.io/4d4a367338f89fe81bb5/ds/content',
       apiChar: 'https://api.npoint.io/4d4a367338f89fe81bb5/ds/characters',
       apiEpi: 'https://api.npoint.io/4d4a367338f89fe81bb5/ds/episodes',
+
+      title: 'Toksan Anime - Demon Slayer',
+      description: 'The Demon Slayer Page',
+      image: 'https://ac59852.github.io/toksan-anime/app-icon.png',
+      ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 
       mobile: null,
       tablet: null,
@@ -68,9 +70,62 @@ export default {
       items: [],
       reviews: [
         {id: 0, heading: "Animation", score: "9.4"},
-        {id: 0, heading: "Storyline", score: "8.8"},
-        {id: 0, heading: "Pacing", score: "9.1"},
+        {id: 1, heading: "Storyline", score: "8.8"},
+        {id: 2, heading: "Pacing", score: "9.1"},
       ],
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.image
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.title
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.ogImage
+        },
+        {
+          hid: 'og:image:alt',
+          name: 'og:image:alt',
+          content: this.title
+        },
+      ]
     }
   },
 
@@ -91,7 +146,11 @@ export default {
   methods: {
     episodeList() { this.items = this.episodes },
 
-    characterList() { this.items = this.characters }
+    characterList() { this.items = this.characters },
+
+    test() {
+      console.log("test")
+    }
   },
 
   components: {

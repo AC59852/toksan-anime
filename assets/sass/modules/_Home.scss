@@ -139,6 +139,16 @@
             & div:nth-child(1) {
                 margin-left: 15px;
             }
+
+            &::after {
+                content: '';
+                min-width: 15px;
+                max-width: 15px;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
     
             > div {
                 width: 136px;
@@ -157,12 +167,16 @@
             }
     
             span {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
                 text-align: center;
                 color: white;
                 font-family: $heading-font;
                 font-weight: 800;
                 font-size: 14px;
-                padding: 4% 0 4%;
+                height: 45px;
                 background-color: rgba(24, 24, 24, 0.94);
     
                 h3 {

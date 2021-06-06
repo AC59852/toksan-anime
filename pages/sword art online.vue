@@ -136,12 +136,6 @@ export default {
   },
 
   mounted () {
-    if (window.innerWidth >= 768) {
-      window.addEventListener('scroll', function () {
-        document.querySelector('.sao__hero').style.opacity = 1 - +window.pageYOffset / 4550 + ''
-      })
-    }
-
     this.checkWidth()
 
     this.$nextTick(function () {
@@ -159,7 +153,7 @@ export default {
       } else {
         this.currentCharacter = this.characters[this.currentId]
       }
-    },
+    }
 
   }
 }

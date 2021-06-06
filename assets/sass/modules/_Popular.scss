@@ -139,6 +139,17 @@
                 height: 270px;
             }
 
+            &__title {
+                h2 {
+                    font-size: 22px;
+                }
+
+                a {
+                    font-size: 18px;
+                    width: 55px;
+                }
+            }
+
             &__item {
                 width: 146px;
                 height: 175px;

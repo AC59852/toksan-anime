@@ -1,9 +1,7 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   target: 'static',
-  server: {
-    host: '192.168.0.18'
-  },
+  
   router: {
     base: '/toksan-anime/'
   },

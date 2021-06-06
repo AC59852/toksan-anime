@@ -166,11 +166,10 @@
     .picture-nav {
         position: relative;
         display: flex;
-        background-image: url('~/assets/images/navImg.png');
+        background-image: url('~/assets/images/navImg_tab.png');
         background-size: cover;
-        background-position: center;
         top: 0;
-        height: 90px;
+        height: 100px;
         nav {
           img {
             filter: brightness(0);
@@ -284,6 +283,9 @@
 }
 
 @media screen and (min-width: 1440px) {
+    .picture-nav {
+        background-image: url("~/assets/images/navImg.png");
+    }
     #popular {
         .popAnime {
             &__custom {

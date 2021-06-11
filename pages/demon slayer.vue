@@ -1,15 +1,15 @@
 <template>
   <section class="animeTemp ds">
     <section class="animeTemp__hero animeTemp__hero--ds">
-      <div class="animeTemp__logoCon">
-        <img src="~/assets/images/ds/ds_logo.png" alt="Demon Slayer Logo" class="animeTemp__logo">
+      <div class="animeTemp__logoCon animeTemp__logoCon--ds">
+        <img src="~/assets/images/ds/ds_logo.png" alt="Demon Slayer Logo" class="animeTemp__logo animeTemp__logo--ds">
         <h2 class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--eb animeTemp__heading--center">Season 2 - Coming Soon</h2>
         <div class="animeTemp__btns animeTemp__btns--hero">
           <span class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--small">Watch Now<img src="~/assets/icons/play-circle.svg" alt="Watch Now Button"></span>
           <span class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--small">Click<img src="~/assets/icons/info.svg" alt="Information Button"></span>
         </div>
       </div>
-      <img class="animeTemp__heroImg" src="~/assets/images/ds/demonmain.png" alt="Demon Slayer Main Character">
+      <img class="animeTemp__heroImg animeTemp__heroImg--ds" src="~/assets/images/ds/demonmain.png" alt="Demon Slayer Main Character">
     </section>
     <section class="ds__content">
       <img class="animeTemp__image animeTemp__image--ds" :src="apiContent.img" alt="Demon Slayer Preview Image">

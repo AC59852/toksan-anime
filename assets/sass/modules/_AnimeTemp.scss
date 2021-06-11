@@ -331,6 +331,10 @@
         &__hero {
             padding: 0 60px;
             justify-content: space-evenly;
+
+            &--ds {
+                justify-content: center;
+            }
         }
 
         &__logoCon, &__heroImg {
@@ -339,16 +343,28 @@
 
         &__logoCon {
             height: auto;
+
+            &--ds {
+                width: 47%;
+            }
         }
 
         &__logo {
             width: 380px;
             max-width: none;
             padding-top: 15px;
+
+            &--ds {
+                width: 443px;
+            }
         }
 
         &__heroImg {
             max-width: 545px;
+
+            &--ds {
+                max-width: 688px;
+            }
         }
 
         &__btns {

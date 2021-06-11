@@ -22,9 +22,11 @@
             <span v-for="(block, index) in apiContent" @click="changeContent(block); setActive(index)" class="animeTemp__btn animeTemp__btn--mha animeTemp__btn--filter" :class="{animeTemp__active: activeComponent === index}" :key="block.id">{{ block.heading }}</span>
           </div>
         </div>
-          <div class="mha__wrapper">
-            <img v-if="activeComponent == 0" class="animeTemp__image animeTemp__image--mha" :src="currentContent.img" alt="Image of Deku">
-            <MyHeroContent v-else-if="activeComponent == 1 || activeComponent == 2" v-for="item in currentContent.characters" :key="item.id" :item="item"/>
+          <div v-if="activeComponent == 0" class="mha__wrapper mha__wrapper--img">
+            <img class="animeTemp__image animeTemp__image--mha" :src="currentContent.img" alt="Image of Deku">
+          </div>
+          <div v-else-if="activeComponent == 1 || activeComponent == 2" class="mha__wrapper mha__wrapper--list">
+            <MyHeroContent v-for="item in currentContent.characters" :key="item.id" :item="item"/>
           </div>
       </div>
     </section>

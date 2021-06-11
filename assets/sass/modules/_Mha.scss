@@ -38,6 +38,7 @@
             margin-right: 8%;
             margin-left: 6%;
             align-self: flex-start;
+            max-width: 401px;
         }
 
         &__para {
@@ -54,6 +55,47 @@
             width: 65%;
             height: auto;
             padding-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .mha {
+        &__para {
+            font-size: 16px;
+            line-height: 26px;
+            height: 354px;
+        }
+
+        &__wrapper {
+            width: 670px;
+
+            &--img {
+                width: 56%;
+                margin-left: 2%;
+                max-width: 812px;
+            }
+
+            &--list {
+                max-width: 670px;
+            }
+        }
+
+        &__video {
+            width: 100%;
+            height: 307px;
+        }
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .mha {
+        &__content {
+            justify-content: center;
+        }
+
+        &__text {
+            margin-left: 0;
         }
     }
 }

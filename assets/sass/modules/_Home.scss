@@ -1,4 +1,8 @@
-#home {
+// The CSS is kinda hack-y, because I didn't account for
+// Reusable code this much, so for right now manga and home are in here
+
+// TODO: Create a reusable style for anime/manga rows
+#home, #manga {
     margin-bottom: 75px;
     #hero {
         height: 500px;
@@ -75,7 +79,7 @@
         }
     }
 
-    #homeManga, #homeAnime {
+    #homeManga, #homeAnime, .mangaList {
         max-width: 1520px;
         margin: 0 auto;
         .latestTitle {
@@ -116,7 +120,7 @@
             }
         }
 
-        .homeContent {
+        .homeContent, .mangaContent {
             display: flex;
             overflow-x: scroll;
             padding-bottom: 15px;
@@ -176,7 +180,7 @@
                 font-family: $heading-font;
                 font-weight: 800;
                 font-size: 14px;
-                height: 45px;
+                height: 50px;
                 background-color: rgba(24, 24, 24, 0.94);
     
                 h3 {
@@ -221,7 +225,7 @@
 }
 
 @media screen and (min-width: 370px) {
-    #home {
+    #home, #manga {
         #hero {
             .heroWrapper {
                 h2 {
@@ -231,19 +235,19 @@
             }
         }
 
-        #homeManga, #homeAnime {
+        #homeManga, #homeAnime, .mangaList {
             .latestTitle {
                 h2 {
-                    font-size: 24px;
+                    font-size: 23px;
                 }
 
                 a {
-                    font-size: 18px;
-                    width: 55px;
+                    font-size: 16px;
+                    width: 47px;
                 }
             }
 
-            .homeContent {
+            .homeContent, .mangaContent {
                 > div {
                     width: 146px;
                     height: 175px;
@@ -298,7 +302,7 @@
 }
 
 @media screen and (min-width: 768px) {
-    #home {
+    #home, #manga {
         #hero {
             .heroWrapper {
                 h2 { font-size: 38px; }
@@ -306,7 +310,7 @@
             }
         }
 
-        #homeManga, #homeAnime {
+        #homeManga, #homeAnime, .mangaList {
             .latestTitle {
                 h2 { font-size: 22px; }
                 a {
@@ -330,8 +334,8 @@
 }
 
 @media screen and (min-width: 945px) {
-    #home {
-        #homeManga, #homeAnime {
+    #home, #manga {
+        #homeManga, #homeAnime, .mangaList {
             .latestTitle {
 
                 h2 {
@@ -353,7 +357,7 @@
                 }
             }
 
-            .homeContent {
+            .homeContent, .mangaContent {
                 overflow-x: auto;
 
                 & div:nth-child(1) {
@@ -419,7 +423,7 @@
 
 @media screen and (min-width: 1600px) {
     #home {
-        #hero {
+        #hero, #manga {
             height: 695px;
 
             .heroWrapper {
@@ -433,7 +437,7 @@
             }
         }
 
-        #homeManga, #homeAnime {
+        #homeManga, #homeAnime, .mangaList {
             .latestTitle {
                 margin: 50px 0 25px 15px;
 
@@ -441,7 +445,7 @@
                     font-size: 32px;
                 }
             }
-            .homeContent {
+            .homeContent, .mangaContent {
                 > div {
                     width: 202px;
                     height: 246px;

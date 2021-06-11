@@ -1,89 +1,8 @@
 .ds {
-    // Hero content
-    &__hero {
-        background-image: url('~/assets/images/ds/bck.png');
-        background-size: cover;
-        overflow: hidden;
-        height: 100vh;
-    }
-
-    &__logo {
-        width: 53%;
-        display: block;
-        margin: 0 auto;
-        padding-top: 25px;
-        max-width: 384px;
-    }
-
-    &__btns {
-        display: flex;
-        justify-content: center;
-    }
-
-    &__heroImg {
-        width: 100%;
-    }
-    // End of Hero content
-
-    // General content (-- is specific stuff) 
-    &__btn {
-        display: flex;
-        align-items: center;
-        width: auto;
-        border-radius: 4px;
-        font: $ds-heading;
-        color: white;
-        background-color: #181818;
-        margin: 0 10px;
-        padding: 4px 8px;
-        cursor: pointer;
-
-        img { width: 18px; margin-left: 9px;}
-
-        &--small {
-            font-size: 12px;
-            text-transform: uppercase;
-        }
-
-        &--filter {
-            width: 185px;
-            text-align: center;
-            justify-content: center;
-            margin: 0;
-            padding: 10px 6px;
-            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.164);
-        }
-    }
-
-    &__heading {
-        font: $ds-heading;
-
-        &--center {
-            text-align: center;
-            margin: 10px 0;
-        }
-
-        &--eb {
-            font-weight: 800;
-        }
-
-        &--content {
-            margin-top: 8px;
-        }
-    }
-
     &__content {
         width: 90%;
         max-width: 392px;
         margin: 25px auto;
-    }
-
-    &__image {
-        width: 100%;
-
-        &--item {
-            width: 68px;
-        }
     }
 
     &__para {
@@ -93,99 +12,16 @@
           margin: 2px 0 15px;  
         }
     }
-
-    &__list {
-        margin-top: 15px;
-        margin-bottom: 100px;
-    }
-
-    &__item {
-        display: flex;
-        align-items: center;
-        width: 247px;
-        margin: 10px 0;
-    }
-
-    &__name {
-        font: $ds-para;
-        font-size: 14px;
-        font-weight: 600;
-        color: #8F8F8F;
-    }
 }
 
 @media screen and (min-width: 1024px) {
     .ds {
-        &__hero {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        &__logoCon {
-            flex: 0 1 auto;
-            height: 500px;
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        &__logoCon, &__heroImg {
-            margin-top: 75px;
-        }
-
-        &__logo {
-            width: 57%;
-        }
-
-        &__heroImg {
-            width: 50%;
-            margin-left: -10%;
-        }
-
-        &__heading {
-            &--eb {
-                order: 1;
-                margin: 0;
-                font-size: 22px;
-            }
-
-            &--content {
-                margin-top: 0;
-                font-size: 24px;
-            }
-
-            &--cards {
-                margin-left: 5%;
-            }
-        }
-
         &__para {
             font-size: 15px;
             line-height: 135%;
 
             &--content {
                 margin: 16px 0 15px;
-            }
-        }
-
-        &__btns {
-            &--hero { margin: 30px 0; }
-        }
-
-        &__btn {
-            padding: 10px 12px;
-            font-size: 16px;
-
-            img { width: 23px; }
-
-            &--small {
-                font-size: 14px;
-            }
-
-            &--filter {
-                width: 30%;
-                max-width: 180px;
             }
         }
 
@@ -215,14 +51,6 @@
             }
         }
 
-        &__image {
-            width: 440px;
-
-            &--item {
-                width: 72px;
-            }
-        }
-
         &__text {
             width: 410px;
             padding: 30px;
@@ -233,17 +61,6 @@
                 width: auto;
                 box-shadow: none;
             }
-        }
-
-        &__list {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-
-        &__item {
-            width: 230px;
-            margin: 0 0 10px;
         }
 
         &__cards {
@@ -307,48 +124,6 @@
 
     .ds {
 
-        &__hero {
-            padding: 0 60px;
-            justify-content: space-evenly;
-        }
-
-        &__logoCon, &__heroImg {
-            margin-top: 45px;
-        }
-
-        &__logoCon {
-            height: auto;
-        }
-
-        &__logo {
-            width: 443px;
-            max-width: none;
-            padding-top: 15px;
-        }
-
-        &__heroImg {
-            max-width: 645px;
-        }
-
-        &__image {
-           width: 48%;
-           max-width: 680px;
-
-            &--item {
-                width: 72px;
-            }
-        }
-
-        &__heading {
-            &--content {
-                font-size: 32px;
-            }
-
-            &--cards {
-                margin-left: 0;
-            }
-        }
-
         &__para {
             font-size: 16px;
             line-height: 20px;
@@ -396,14 +171,9 @@
             }
         }
 
-        &__btns {
-            &--list {
-                margin: -20px auto 30px;
-            }
-        }
-
         &__cards {
             justify-content:initial;
+            margin-top: 20px;
         }
 
         &__card {
@@ -420,17 +190,6 @@
             }
 
             span:nth-child(2) { font-size: 50px; }
-        }
-
-        &__list {
-            justify-content: center;
-            margin-bottom: 0;
-        }
-
-        &__item {
-            margin-bottom: 15px;
-            width: 255px;
-            margin: 0 0 10px 35px;
         }
     }
 }

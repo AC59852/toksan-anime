@@ -1,9 +1,7 @@
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   target: 'static',
-  server: {
-    host: '192.168.0.18'
-  },
+  
   router: {
     base: '/toksan-anime/'
   },
@@ -95,10 +93,16 @@ export default {
 
   googleFonts: {
     families: {
-      Heebo: [300, 400, 500, 600, 700, 800],
       Spartan: [300, 400, 500, 600, 700, 800],
       Assistant: [300, 400, 500, 600, 700, 800],
-      'Open+Sans': [400, 500, 600, 700, 800]
+
+      // Demon Slayer Fonts
+      Heebo: [300, 400, 500, 600, 700, 800],
+      'Open+Sans': [400, 500, 600, 700, 800],
+
+      // My Hero Fonts
+      Coda: [300, 400, 500, 600, 700, 800],
+      Lato: [300, 400, 700, 900],
     }
   },
 

@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ 'picture-nav': $route.path == '/popular' }">
+  <header :class="{ 'picture-nav': $route.path == '/popular', 'picture-nav picture-nav-manga': $route.path == '/manga'}">
     <nav>
       <nuxt-link v-if="desktop" to="/">
         <img src="~/assets/icons/toksan_logo_site.svg" alt="Toksan Anime Logo">
@@ -29,7 +29,7 @@ export default {
         { id: 0, name: 'Home', icon: 'home', route: '/' },
         { id: 1, name: 'Search', icon: 'search', route: '/search' },
         { id: 2, name: 'Popular', icon: 'fire-alt', route: '/popular' },
-        { id: 3, name: 'Books', icon: 'book', route: '/books' }
+        { id: 3, name: 'Manga', icon: 'book', route: '/manga' }
       ]
     }
   },

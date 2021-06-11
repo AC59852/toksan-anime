@@ -14,6 +14,12 @@ Vue.mixin({
         const resContent = await axios.get(this.api, config)
 
         this.apiContent = resContent.data
+
+        if(this.currentContent) {
+          this.currentContent = this.apiContent[0]
+          console.log(this.currentContent)
+        } else { return }
+
       } catch (err) { console.log(err) }
     },
 

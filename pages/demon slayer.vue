@@ -1,20 +1,20 @@
 <template>
-  <section class="ds">
-    <section class="ds__hero">
-      <div class="ds__logoCon">
-        <img src="~/assets/images/ds/ds_logo.png" alt="Demon Slayer Logo" class="ds__logo">
-        <h2 class="ds__heading ds__heading--eb ds__heading--center">Season 2 - Coming Soon</h2>
-        <div class="ds__btns ds__btns--hero">
-          <span class="ds__btn ds__btn--small">Watch Now<img src="~/assets/icons/play-circle.svg" alt="Watch Now Button"></span>
-          <span class="ds__btn ds__btn--small">Click<img src="~/assets/icons/info.svg" alt="Information Button"></span>
+  <section class="animeTemp ds">
+    <section class="animeTemp__hero animeTemp__hero--ds">
+      <div class="animeTemp__logoCon">
+        <img src="~/assets/images/ds/ds_logo.png" alt="Demon Slayer Logo" class="animeTemp__logo">
+        <h2 class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--eb animeTemp__heading--center">Season 2 - Coming Soon</h2>
+        <div class="animeTemp__btns animeTemp__btns--hero">
+          <span class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--small">Watch Now<img src="~/assets/icons/play-circle.svg" alt="Watch Now Button"></span>
+          <span class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--small">Click<img src="~/assets/icons/info.svg" alt="Information Button"></span>
         </div>
       </div>
-      <img class="ds__heroImg" src="~/assets/images/ds/demonmain.png" alt="Demon Slayer Main Character">
+      <img class="animeTemp__heroImg" src="~/assets/images/ds/demonmain.png" alt="Demon Slayer Main Character">
     </section>
     <section class="ds__content">
-      <img class="ds__image" :src="apiContent.img" alt="Demon Slayer Preview Image">
+      <img class="animeTemp__image animeTemp__image--ds" :src="apiContent.img" alt="Demon Slayer Preview Image">
       <div class="ds__text">
-        <h2 class="ds__heading ds__heading--content">{{ apiContent.heading }}</h2>
+        <h2 class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--content">{{ apiContent.heading }}</h2>
         <p class="ds__para ds__para--content">{{ apiContent.para1 }}</p>
         <p class="ds__para">{{ apiContent.para2 }}</p>
         <span class="ds__quote ds__para" v-if="desktop">&#8212; {{ apiContent.quote }}</span>
@@ -22,17 +22,17 @@
     </section>
     <section class="ds__content ds__content--2">
       <div v-if="tablet || desktop" class="ds__content--cards">
-        <h2 class="ds__heading ds__heading--content ds__heading--cards">Overall Review</h2>
+        <h2 class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--content animeTemp__heading--cards">Overall Review</h2>
         <div class="ds__cards">
           <ReviewCard v-for="review in reviews" :key="review.id" :review="review" />
         </div>
       </div>
       <div class="ds__content--list">
-        <div class="ds__btns ds__btns--list">
-          <span @click="characterList()" class="ds__btn ds__btn--filter">Characters</span>
-          <span @click="episodeList()" class="ds__btn ds__btn--filter">Episodes</span>
+        <div class="animeTemp__btns animeTemp__btns--list">
+          <span @click="characterList()" class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--filter">Characters</span>
+          <span @click="episodeList()" class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--filter">Episodes</span>
         </div>
-        <div class="ds__list">
+        <div class="animeTemp__list">
           <DemonSlayerList v-for="item in items" :key="item.id" :item="item" />
         </div>
       </div>

@@ -1,0 +1,18 @@
+.mha {
+    background-color: #FEC601;
+    &__content {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    &__wrapper {
+        height: 300px;
+        overflow-y: scroll;
+        padding-bottom: 60px;
+    }
+
+    &__para {
+        font: $mha-para;
+        font-weight: 800;
+    }
+}

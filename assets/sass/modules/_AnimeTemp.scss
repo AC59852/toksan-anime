@@ -59,6 +59,10 @@
             margin: auto auto 0;
             padding-top: 10%;
         }
+
+        &--ds {
+            filter: saturate(0.7);
+        }
     }
     // End of Hero Styling
 
@@ -121,6 +125,11 @@
                 padding-bottom: 8px;
                 border-bottom: solid 4px black;
             }
+
+            &--item {
+                font: $mha-para;
+                font-weight: 900;
+            }
         }
 
         &--center {
@@ -142,6 +151,10 @@
 
         &--item {
             width: 68px;
+
+            &--mha {
+                margin-right: 2%;
+            }
         }
     }
     // End of General Styling
@@ -189,6 +202,12 @@
             display: flex;
             align-items: center;
             justify-content: center;
+
+            &--mha {
+                flex-direction: row;
+                background-image: url('~/assets/images/mha/mha_bck_tab.png');
+                background-position: top center;
+            }
         }
 
         &__logoCon {
@@ -197,6 +216,13 @@
             width: 50%;
             display: flex;
             flex-direction: column;
+
+            &--mha {
+                padding-top: 0;
+                margin-left: 8%;
+                height: auto;
+                width: 550px;
+            }
         }
 
         &__logoCon, &__heroImg {
@@ -205,15 +231,32 @@
 
         &__logo {
             width: 57%;
+
+            &--mha {
+                max-width: 540px;
+                width: 80%;
+            }
         }
 
         &__heroImg {
             width: 50%;
             margin-left: -10%;
+
+            &--mha {
+                margin: 0 0 0 auto;
+                width: 40%;
+            }
         }
 
         &__btns {
-            &--hero { margin: 30px 0; }
+            &--hero { 
+                margin: 30px 0; 
+                
+                &--mha {
+                    justify-content: initial;
+                    margin-left: 9%;
+                }
+            }
         }
 
         &__btn {
@@ -242,10 +285,29 @@
             &--content {
                 margin-top: 0;
                 font-size: 24px;
+                height: 557px;
             }
 
             &--cards {
                 margin-left: 5%;
+            }
+
+            &--ds {
+                height: auto;
+            }
+
+            &--mha {
+                order: 0;
+                margin: 15px 0;
+
+                &--large {
+                    font-size: 40px;
+                }
+
+                &--item {
+                    font-size: 16px;
+                    margin-bottom: 5px;
+                }
             }
         }
 
@@ -256,6 +318,11 @@
 
             &--item {
                 width: 72px;
+            }
+
+            &--mha {
+                width: 90%;
+                object-fit: contain;
             }
         }
 
@@ -268,6 +335,13 @@
         &__item {
             width: 230px;
             margin: 0 0 10px;
+
+            &--mha {
+                margin: 10px 0 10px 20px;
+                &:nth-child(odd) {
+                    margin-left: 0;
+                }
+            }
         }
     }
 }
@@ -277,6 +351,14 @@
         &__hero {
             padding: 0 60px;
             justify-content: space-evenly;
+
+            &--ds {
+                justify-content: center;
+            }
+
+            &--mha {
+                padding: 0;
+            }
         }
 
         &__logoCon, &__heroImg {
@@ -285,21 +367,53 @@
 
         &__logoCon {
             height: auto;
+
+            &--ds {
+                width: 47%;
+            }
+
+            &--mha {
+                margin-left: 13%;
+                width: 540px;
+            }
         }
 
         &__logo {
             width: 380px;
             max-width: none;
             padding-top: 15px;
+
+            &--ds {
+                width: 443px;
+            }
+
+            &--mha {
+                width: 100%;
+            }
         }
 
         &__heroImg {
             max-width: 545px;
+
+            &--ds {
+                max-width: 688px;
+            }
+
+            &--mha {
+                max-width: 455px;
+                margin-top: 0;
+            }
         }
 
         &__btns {
             &--list {
                 margin: -10px auto 30px;
+            }
+
+            &--hero {
+                &--mha {
+                    margin-left: 0;
+                }
             }
         }
 
@@ -311,6 +425,14 @@
             &--cards {
                 margin-left: 0;
             }
+
+            &--mha {
+                font-size: 24px;
+
+                &--large {
+                    font-size: 46px;
+                }
+            }
         }
 
         &__image {
@@ -321,6 +443,14 @@
 
             &--item {
                 width: 72px;
+
+                &--mha {
+                    width: 86px;
+                }
+            }
+
+            &--mha {
+                width: 100%;
             }
         }
 
@@ -333,6 +463,30 @@
             margin-bottom: 15px;
             width: 255px;
             margin: 0 0 10px 35px;
+
+            &--mha {
+                width: 316px;
+                margin: 12px 0 12px 36px;
+                max-width: 316px;
+                padding: 0 8px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .animeTemp {
+        &__logoCon {
+            &--mha {
+                margin-left: 22%;
+            }
+        }
+        &__heroImg {
+            &--mha {
+                max-width: 475px;
+                padding-top: 0;
+                margin-top: auto;
+            }
         }
     }
 }

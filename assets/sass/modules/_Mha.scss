@@ -15,4 +15,87 @@
         font: $mha-para;
         font-weight: 800;
     }
+
+    &__video {
+        width: 81%;
+        height: 257px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1020px) {
+    .mha {
+        &__content {
+            display: flex;
+            width: 100%;
+            overflow-x: hidden;
+            padding: 5% 0;
+        }
+
+        &__text {
+            width: 35%;
+            flex: 1 0 auto;
+            margin-right: 8%;
+            margin-left: 6%;
+            align-self: flex-start;
+            max-width: 401px;
+        }
+
+        &__para {
+            font-size: 14px;
+            line-height: 22px;
+            height: 275px;
+        }
+
+        &__wrapper {
+            flex: 1 0 auto;
+            overflow-y: auto;
+            display: flex;
+            flex-wrap: wrap;
+            width: 65%;
+            height: auto;
+            padding-bottom: 0;
+        }
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .mha {
+        &__para {
+            font-size: 16px;
+            line-height: 26px;
+            height: 354px;
+        }
+
+        &__wrapper {
+            width: 670px;
+
+            &--img {
+                width: 56%;
+                margin-left: 2%;
+                max-width: 812px;
+            }
+
+            &--list {
+                max-width: 670px;
+            }
+        }
+
+        &__video {
+            width: 100%;
+            height: 307px;
+        }
+    }
+}
+
+@media screen and (min-width: 1680px) {
+    .mha {
+        &__content {
+            justify-content: center;
+        }
+
+        &__text {
+            margin-left: 0;
+        }
+    }
 }

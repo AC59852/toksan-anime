@@ -38,6 +38,7 @@
 
         &--mha {
             width: 80%;
+            max-width: 540px;
         }
     }
 
@@ -341,6 +342,56 @@
                 &:nth-child(odd) {
                     margin-left: 0;
                 }
+            }
+        }
+    }
+}
+
+@media (min-width: 680px) and (orientation: portrait) {
+    .animeTemp {
+        &__logo {
+            &--mha {
+                width: 60%;
+            }
+        }
+
+        &__heading {
+            &--mha {
+                font-size: 24px;
+
+                &--large {
+                    font-size: 36px;
+                }
+            }
+        }
+
+        &__btns {
+            &--mha {
+                margin: 25px 0 15px;
+            }
+        }
+
+        &__btn {
+            padding: 10px;
+        }
+
+        &__heroImg {
+            &--mha {
+                width: 50%;
+            }
+        }
+
+        &__image {
+            &--mha {
+                width: 90%;
+                display: block;
+                margin: 0 auto;
+            }
+        }
+
+        &__item {
+            &--mha {
+                width: 45%;
             }
         }
     }

@@ -79,7 +79,7 @@
         }
     }
 
-    #homeManga, #homeAnime, .mangaList {
+    .listWrapper {
         max-width: 1520px;
         margin: 0 auto;
         .latestTitle {
@@ -120,10 +120,10 @@
             }
         }
 
-        .homeContent, .mangaContent {
+        .listContent {
             display: flex;
             overflow-x: scroll;
-            padding-bottom: 15px;
+            padding-bottom: 25px;
 
             &::-webkit-scrollbar {
                 display: block;
@@ -235,7 +235,7 @@
             }
         }
 
-        #homeManga, #homeAnime, .mangaList {
+        .listWrapper {
             .latestTitle {
                 h2 {
                     font-size: 23px;
@@ -247,7 +247,7 @@
                 }
             }
 
-            .homeContent, .mangaContent {
+            .listContent {
                 > div {
                     width: 146px;
                     height: 175px;
@@ -310,7 +310,7 @@
             }
         }
 
-        #homeManga, #homeAnime, .mangaList {
+        .listWrapper {
             .latestTitle {
                 h2 { font-size: 22px; }
                 a {
@@ -335,7 +335,7 @@
 
 @media screen and (min-width: 945px) {
     #home, #manga {
-        #homeManga, #homeAnime, .mangaList {
+        .listWrapper {
             .latestTitle {
 
                 h2 {
@@ -357,7 +357,7 @@
                 }
             }
 
-            .homeContent, .mangaContent {
+            .listContent {
                 overflow-x: auto;
 
                 & div:nth-child(1) {
@@ -437,7 +437,7 @@
             }
         }
 
-        #homeManga, #homeAnime, .mangaList {
+        .listWrapper {
             .latestTitle {
                 margin: 50px 0 25px 15px;
 
@@ -445,7 +445,7 @@
                     font-size: 32px;
                 }
             }
-            .homeContent, .mangaContent {
+            .listContent {
                 > div {
                     width: 202px;
                     height: 246px;

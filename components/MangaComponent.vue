@@ -1,11 +1,11 @@
 <template>
-  <section class="mangaList">
+  <section class="mangaList listWrapper">
     <div class="latestTitle">
         <h2>{{ title }}</h2><nuxt-link to="/" class="latestLink">
         See All
         </nuxt-link>
     </div>
-    <div class="mangaContent">
+    <div class="listContent">
       <div v-for="manga in apiContentPop" :key="manga.id" :class="'manga' + manga.id" :style="{backgroundImage: 'url(' + manga.attributes.posterImage.small + ')'}">
           <span>
             <h3 v-if="manga.attributes.titles.en == null || manga.attributes.titles.en == ''">{{ manga.attributes.canonicalTitle }}:</h3>

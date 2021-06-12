@@ -1,11 +1,11 @@
 <template lang="">
-  <section id="homeAnime">
+  <section id="homeAnime" class="listWrapper">
     <div class="latestTitle">
       <h2>Latest Anime Releases</h2><nuxt-link to="/" class="latestLink">
         See All
       </nuxt-link>
     </div>
-    <div class="homeContent">
+    <div class="listContent">
       <Anime v-for="(anime, index) in apiContent" :key="index" :anime="anime" :class="'anime' + anime.id" />
     </div>
   </section>

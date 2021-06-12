@@ -3,7 +3,6 @@
     .popAnime {
         &__custom {
             width: 100%;
-            max-width: 414px;
             background-position: center;
             background-size: auto 105%;
             background-repeat: no-repeat;
@@ -162,6 +161,16 @@
     }
 }
 
+@media screen and (min-width: 414px) {
+    #popular {
+        .popAnime {
+            &__custom {
+                background-size: auto 103%;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
     .picture-nav {
         position: relative;
@@ -250,6 +259,45 @@
                     height: 60px;
                     padding: 0;
                 }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 568px) and (max-width: 1023px) {
+    #popular {
+        .popAnime {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+
+            &__custom {
+                background-size: auto 107%;
+                width: 50%;
+                max-width: none;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 885px) and (orientation: portrait) {
+    #popular {
+        .popAnime {
+            &__custom {
+                background-size: 102%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+    #popular {
+        .popAnime {
+            &__custom {
+                background-size: 110%;
+                height: 320px;
+                width: 50%;
+                max-width: none;
             }
         }
     }

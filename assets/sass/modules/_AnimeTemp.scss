@@ -397,6 +397,29 @@
     }
 }
 
+@media screen and (min-width: 1024px) and (orientation: portrait) {
+    .animeTemp {
+        &__logoCon {
+            &--ds {
+                margin-top: 12%;
+            }
+        }
+
+
+        &__logo {
+            &--ds {
+                width: 62%;
+            }
+        }
+
+        &__heroImg {
+            &--ds {
+                width: 56%;
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1280px) {
     .animeTemp {
         &__hero {

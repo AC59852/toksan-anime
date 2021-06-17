@@ -4,7 +4,7 @@
       <div class="animeTemp__logoCon animeTemp__logoCon--ds">
         <img src="~/assets/images/ds/ds_logo.png" alt="Demon Slayer Logo" class="animeTemp__logo animeTemp__logo--ds">
         <h2 class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--eb animeTemp__heading--center">Season 2 - Coming Soon</h2>
-        <div class="animeTemp__btns animeTemp__btns--hero">
+        <div class="animeTemp__btns animeTemp__btns--hero animeTemp__btns--ds">
           <span class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--small">Watch Now<img src="~/assets/icons/play-circle.svg" alt="Watch Now Button"></span>
           <span class="animeTemp__btn animeTemp__btn--ds animeTemp__btn--small">Click<img src="~/assets/icons/info.svg" alt="Information Button"></span>
         </div>
@@ -14,7 +14,8 @@
     <section class="ds__content">
       <img class="animeTemp__image animeTemp__image--ds" :src="apiContent.img" alt="Demon Slayer Preview Image">
       <div class="ds__text">
-        <h2 class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--content">{{ apiContent.heading }}</h2>
+        <h2 v-if="desktop == true" class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--content">Synopsis</h2>
+        <h2 v-else class="animeTemp__heading animeTemp__heading--ds animeTemp__heading--content">{{ apiContent.heading }}</h2>
         <p class="ds__para ds__para--content">{{ apiContent.para1 }}</p>
         <p class="ds__para">{{ apiContent.para2 }}</p>
         <span class="ds__quote ds__para" v-if="desktop">&#8212; {{ apiContent.quote }}</span>

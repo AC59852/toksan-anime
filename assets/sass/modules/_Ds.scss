@@ -14,59 +14,28 @@
     }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 768px) {
     .ds {
-        &__para {
-            font-size: 15px;
-            line-height: 135%;
-
-            &--content {
-                margin: 16px 0 15px;
-            }
-        }
-
         &__content {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
+            width: 80%;
+            margin: 50px auto;
             max-width: none;
-            width: 100%;
-            margin: 50px 0;
-
-            &--col {
-                flex-direction: column;
-            }
-
-            &--list {
-                width: 50%;
-            }
-
-            &--2 {
-                align-items: initial;
-            }
-
-            &--cards {
-                width: 50%;
-                max-width: 630px;
-            }
         }
 
-        &__text {
-            width: 410px;
-            padding: 30px;
-            box-shadow: 0 6px 12px -3px rgba($color: #000000, $alpha: 0.25);
-
-            &--item {
-                padding: 0;
-                width: auto;
-                box-shadow: none;
+        &__para {
+            &--content {
+                margin-bottom: 10px;
             }
+
+            font-size: 14px;
+            line-height: 22px;
         }
 
         &__cards {
             display: flex;
             justify-content: space-evenly;
-            margin-top: 5%;
+            margin-top: 3%;
+            margin-bottom: 60px;
         }
 
         &__heading--cards, &__btns--list {
@@ -78,7 +47,8 @@
             flex-direction: column;
             flex: 0 1 auto;
             align-items: center;
-            width: 155px;
+            width: 30%;
+            max-width: 176px;
             height: 211px;
             border-radius: 2px;
             margin-left: 10px;
@@ -121,6 +91,64 @@
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .ds {
+        &__para {
+            font-size: 15px;
+            line-height: 135%;
+
+            &--content {
+                margin: 16px 0 15px;
+            }
+        }
+
+        &__content {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            max-width: none;
+            width: 100%;
+            margin: 70px 0;
+
+            &--col {
+                flex-direction: column;
+            }
+
+            &--list {
+                width: 50%;
+            }
+
+            &--2 {
+                align-items: initial;
+                margin-bottom: 0;
+            }
+
+            &--cards {
+                width: 50%;
+                max-width: 630px;
+                margin-bottom: 0;
+            }
+        }
+
+        &__text {
+            width: 410px;
+            padding: 30px;
+            box-shadow: 0 6px 12px -3px rgba($color: #000000, $alpha: 0.25);
+
+            &--item {
+                padding: 0;
+                width: auto;
+                box-shadow: none;
+            }
+        }
+
+        &__cards {
+            margin-top: 7%;
+            margin-bottom: 0;
+        }
+    }
+}
+
 @media screen and (min-width: 1280px) {
 
     .ds {
@@ -154,7 +182,7 @@
         }
 
         &__content {
-            max-width: 1600px;
+            max-width: 1560px;
             width: 93%;
             margin: 50px auto;
             justify-content: space-between;

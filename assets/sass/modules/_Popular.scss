@@ -175,13 +175,15 @@
     .picture-nav {
         position: relative;
         display: flex;
-        background-image: url('~/assets/images/navImg_tab.png');
+        background-image: url('~/assets/images/navImg3.jpg');
+        background-position: center;
         background-size: cover;
         top: 0;
         height: 100px;
 
         &-manga {
             background-image: url('~/assets/images/navImg_manga.png') !important;
+            background-position: center;
         }
 
         nav {
@@ -337,10 +339,14 @@
 
 @media screen and (min-width: 1440px) {
     .picture-nav {
-        background-image: url("~/assets/images/navImg.png");
+        background-image: url("~/assets/images/navImg3.jpg");
+        background-size: cover;
+        background-position: center;
+
 
         &-manga {
             background-image: url('~/assets/images/navImg_manga.png') !important;
+            background-position: initial;
         }
     }
     #popular {

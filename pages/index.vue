@@ -2,7 +2,7 @@
   <div class="container">
     <section id="home">
       <HomeHero />
-      <HomeManga />
+      <LazyHomeManga />
       <aside class="homeInfo">
         <h2>Never Miss Another Release!</h2>
         <p>Toksan Anime is your #1 source for the newest releases of your favourite manga or anime. Discover new shows or manga for the first time, explore which anime’s are becoming popular or simply relive some of the best moments anime has to offer.</p>
@@ -10,7 +10,7 @@
           <a v-for="asideIcon in asideIcons" :key="asideIcon.id" :href="asideIcon.link" target="_blank"><fa :icon="['fab', asideIcon.icon]" /></a>
         </div>
       </aside>
-      <HomeAnime />
+      <LazyHomeAnime />
     </section>
   </div>
 </template>

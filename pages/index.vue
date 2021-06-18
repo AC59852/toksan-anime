@@ -21,7 +21,6 @@ export default {
   data () {
     return {
       title: "Toksan Anime",
-      description: "This is a test description",
       image: "https://ac59852.github.io/toksan-anime/app-icon.png",
       ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 
@@ -37,11 +36,6 @@ export default {
     return {
       title: this.title,
       meta: [
-        {
-          hid: 'description',
-          name: 'description',
-          content: this.description
-        },
         {
           hid: 'twitter:title',
           name: 'twitter:title',

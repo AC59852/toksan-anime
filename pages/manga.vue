@@ -9,6 +9,67 @@
 
 <script>
 export default {
+  data() {
+    return {
+      title: 'Toksan Anime - Demon Slayer',
+      description: `Toksan Anime provides all forms of Japanese cultural content, that includes manga! Check out our curated lists of most popular, most recent, and even hidden gems!`,
+      image: 'https://ac59852.github.io/toksan-anime/app-icon.png',
+      ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
+    }
+  },
+
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:title',
+          name: 'twitter:title',
+          content: this.title
+        },
+        {
+          hid: 'twitter:description',
+          name: 'twitter:description',
+          content: this.description
+        },
+        {
+          hid: 'twitter:image',
+          name: 'twitter:image',
+          content: this.image
+        },
+        {
+          hid: 'twitter:image:alt',
+          name: 'twitter:image:alt',
+          content: this.title
+        },
+        {
+          hid: 'og:title',
+          name: 'og:title',
+          content: this.title
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.description
+        },
+        {
+          hid: 'og:image',
+          name: 'og:image',
+          content: this.ogImage
+        },
+        {
+          hid: 'og:image:alt',
+          name: 'og:image:alt',
+          content: this.title
+        },
+      ]
+    }
+  },
 }
 </script>
 

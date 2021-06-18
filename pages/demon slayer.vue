@@ -54,7 +54,7 @@ export default {
       apiEpi: 'https://api.npoint.io/4d4a367338f89fe81bb5/ds/episodes',
 
       title: 'Toksan Anime - Demon Slayer',
-      description: 'The Demon Slayer Page',
+      description: 'Follow the life of loyal brother turned Demon Slayer, Tanjiro Kamado, in the epic, action packed anime of 2020, aptly named, Demon Slayer! Provided to you by Toksan Anime, Demon Free!',
       image: 'https://ac59852.github.io/toksan-anime/app-icon.png',
       ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 

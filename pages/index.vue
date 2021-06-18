@@ -21,7 +21,7 @@ export default {
   data () {
     return {
       title: "Toksan Anime",
-      description: "This is a test description",
+      description: "Toksan Anime is your #1 source for the newest releases of your favourite manga or anime. Discover new shows or manga for the first time, explore which anime’s are becoming popular or simply relive some of the best moments anime has to offer.",
       image: "https://ac59852.github.io/toksan-anime/app-icon.png",
       ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 

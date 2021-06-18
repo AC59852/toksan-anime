@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="wrapper">
     <Nav />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 <script>

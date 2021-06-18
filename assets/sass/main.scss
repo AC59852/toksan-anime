@@ -24,6 +24,12 @@ html {
     margin: 0 auto;
 }
 
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 54px;
+}
+
 .transitionTest {
   position: relative;
   span {

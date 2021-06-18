@@ -1,5 +1,5 @@
 <template>
-  <header :class="{ 'picture-nav': $route.path == '/popular', 'picture-nav picture-nav-manga': $route.path == '/manga'}">
+  <header :class="{ 'picture-nav': $route.path == '/popular', 'picture-nav picture-nav-manga': $route.path == '/manga', 'navbar--hidden': !showNavBar}">
     <nav>
       <nuxt-link v-if="desktop" to="/">
         <img src="~/assets/icons/toksan_logo_site.svg" alt="Toksan Anime Logo">
@@ -25,6 +25,9 @@ export default {
       mobile: null,
       desktop: null,
 
+      showNavBar: true,
+      lastScrollPosition: 0,
+
       links: [
         { id: 0, name: 'Home', icon: 'home', route: '/' },
         { id: 1, name: 'Search', icon: 'search', route: '/search' },
@@ -43,9 +46,15 @@ export default {
       this.desktop = true
     }
 
+    window.addEventListener('touchmove', this.onScroll)
+
     this.$nextTick(function () {
       window.addEventListener('resize', this.getWindowWidth)
     })
+  },
+
+  beforeDestroy () {
+  window.removeEventListener('touchmove', this.onScroll)
   },
 
   methods: {
@@ -53,11 +62,29 @@ export default {
       if (window.innerWidth <= 1023) {
         this.mobile = true
         this.desktop = false
-      } else if (window.innerWidth >= 1024) {
+      } else if (window.innerWidth >= 1023) {
         this.mobile = false
         this.desktop = true
       }
+    },
+
+    onScroll () {
+      if(this.mobile == true) {
+        const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+      if (currentScrollPosition < 0) {
+        return
+      }
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 60) {
+        return
+      }
+      this.showNavBar = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
+      }
     }
+
+    
   }
 }
 </script>

@@ -21,6 +21,7 @@ export default {
   data () {
     return {
       title: "Toksan Anime",
+      description: "Toksan Anime is your #1 source for the newest releases of your favourite manga or anime. Discover new shows or manga for the first time, explore which anime’s are becoming popular or simply relive some of the best moments anime has to offer.",
       image: "https://ac59852.github.io/toksan-anime/app-icon.png",
       ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 
@@ -36,6 +37,11 @@ export default {
     return {
       title: this.title,
       meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.description
+        },
         {
           hid: 'twitter:title',
           name: 'twitter:title',

@@ -61,7 +61,7 @@ export default {
       desktop: null,
 
       title: 'Toksan Anime - Sword Art Online',
-      description: `Link Start! Put on your NerveGear, get comfortable and sign-in to the Sword Art Online breakdown! And don't worry, Toksan Anime won't keep you here forever, yet.`,
+      description: `Link Start! Put on your NerveGear, get comfortable and sign-in to the Sword Art Online breakdown! And don't worry, Toksan Anime won't keep you here forever, unless?`,
       image: 'https://ac59852.github.io/toksan-anime/app-icon.png',
       ogImage: 'https://ac59852.github.io/toksan-anime/fb.png',
 

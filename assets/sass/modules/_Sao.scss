@@ -1,5 +1,12 @@
 .sao {
 
+    &__logo {
+        width: 87%;
+        display: block;
+        padding-top: 29%;
+        margin: 0 auto;
+    }
+
     &__hero {
         height: 100vh;
         background-image: url("https://bit.ly/2QRwWzq");
@@ -19,6 +26,11 @@
             background-image: url("https://bit.ly/3b8Dro7");
             max-height: 520px;
         }
+    }
+
+    &__characters {
+        position: relative;
+        margin-bottom: 120px;
     }
 
     &__image {
@@ -89,6 +101,51 @@
             width: 300px;
         }
     }
+
+    &__arrows {
+        display: flex;
+        position: absolute;
+        bottom: -40px;
+        right: 15px;
+    }
+
+    &__arrow {
+        width: 30px;
+        cursor: pointer;
+    }
+}
+
+@media screen and (min-width: 375px) {
+    .sao {
+        &__heading {
+
+            &::after {
+                top: 140%;
+            }
+        }
+        &__content {
+            &--0 {
+                padding-top: 0;
+                height: 520px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        &__para, &__quote {
+            font-size: 15px;
+        }
+
+        &__para {
+            line-height: 150%;
+
+            &--white {
+                width: 324px;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 768px) {
@@ -112,12 +169,14 @@
             background-image: none;
             display: flex;
             align-items: center;
-            width: 950px;
+            width: 95%;
+            justify-content: space-evenly;
             margin: 73px auto;
 
             &--0 {
                 max-height: 100%;
                 height: auto;
+                flex-direction: row;
             }
         }
 
@@ -127,25 +186,44 @@
             
             img {
                 object-fit: cover;
-                height: 491px;
+                height: auto;
+                width: 90%;
+            }
+
+            &--0 {
+                img {
+                    margin-left: auto;
+                    margin-right: 0;
+                }
             }
 
             &--0, &--character {
                 order: 1;
             }
+
+            &--character {
+                width: 260px;
+            }
         }
 
         &__text {
-            width: 395px;
+            width: 430px;
+        }
+
+        &__para, &__quote {
+            width: 95%;
         }
 
         &__para {
-            font-size: 14px;
-            width: 100%;
+            font-size: 15px;
+
+            &--char {
+                width: 95%;
+            }
         }
 
         &__heading {
-            margin-bottom: 63px;
+            margin-bottom: 50px;
 
             &::after {
                 background-color: black;
@@ -156,11 +234,39 @@
         &__heading, &__para {
             color: black;
         }
+
+        &__arrows {
+            justify-content: space-evenly;
+            width: 150px;
+            bottom: 18%;
+            left: 30%;
+            transform: translateX(-50%);
+        }
+    }
+}
+
+@media screen and (min-width: 834px) {
+    .sao {
+        &__arrows {
+            transform: translateX(-55%);
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sao {
+        &__arrows {
+            transform: translateX(-60%);
+        }
     }
 }
 
 @media screen and (min-width: 1200px) {
     .sao {
+
+        &__logo {
+            padding-top: 200px;
+        }
 
         &__content {
             width: 90%;
@@ -170,6 +276,18 @@
                 height: 576px;
                 padding-top: 0;
                 max-height: 100%;
+            }
+        }
+
+        &__characters {
+            margin-bottom: 60px;
+        }
+
+        &__image {
+            width: 500px;
+
+            img {
+                width: 100%;
             }
         }
 
@@ -183,6 +301,8 @@
 
         &__heading {
             font-size: 48px;
+            margin-bottom: 70px;
+
             &--white {
                 color: white;
 
@@ -193,18 +313,26 @@
         }
 
         &__para {
-            font-size: 19px;
+            font-size: 18px;
+            margin: 30px auto 0;
+
             &--white {
                 color: white;
+                font-size: 20px;
             }
 
             &--char {
-                width: 500px;
+                width: 525px;
             }
         }
 
         &__quote {
             font-size: 16px;
+        }
+
+        &__arrows {
+            transform: translateX(-100%);
+            bottom: 10%;
         }
     }
 }
@@ -213,20 +341,17 @@
     .sao {
         &__content {
             width: 1470px;
-            margin: 150px auto;
+            margin: 180px auto;
 
             &--0 {
-                height: 650px;
-                margin-top: 100px;
+                height: 725px;
+                margin-top: 150px;
             }
         }
 
-        &__image {
-            width: 421px;
-
-            img {
-                height: auto;
-            }
+        &__characters {
+            margin-top: -20px;
+            margin-bottom: 60px;
         }
 
         &__text {
@@ -238,12 +363,7 @@
         }
 
         &__para, &__quote {
-            font-size: 20px;
-            margin-top: 59px;
-        }
-
-        &__quote {
-            font-size: 18px;
+            width: 90%;
         }
     }
 }

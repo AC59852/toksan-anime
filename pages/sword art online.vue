@@ -31,9 +31,6 @@
       :desktop="desktop"
       :class="'sao__content sao__content__' + block.id"
     />
-    <div @click="changeCharacter()">
-      Click Me
-    </div>
     <section class="sao__characters sao__content">
       <h2 v-if="mobile" class="sao__heading sao__name">
         {{ currentCharacter.name }}
@@ -46,6 +43,10 @@
         <p class="sao__para sao__para--char">
           {{ currentCharacter.para }}
         </p>
+      </div>
+      <div class="sao__arrows">
+        <img class="sao__arrow sao__arrow--1" @click="changeCharacterDown()" src="@/assets/icons/chevron-left.svg">
+        <img class="sao__arrow" @click="changeCharacterUp()" src="@/assets/icons/chevron-right.svg">
       </div>
     </section>
   </section>
@@ -70,6 +71,8 @@ export default {
 
       apiContent: [],
       characters: [],
+
+      test: 'test',
 
       currentId: 0,
 
@@ -144,12 +147,24 @@ export default {
   },
 
   methods: {
-    changeCharacter () {
+    changeCharacterUp () {
       this.currentId += 1
 
       if (this.currentId >= this.characters.length) {
         this.currentId = 0
         this.currentCharacter = this.characters[0]
+      } else {
+        this.currentCharacter = this.characters[this.currentId]
+      }
+    },
+
+    changeCharacterDown () {
+      this.currentId -= 1
+
+      if (this.currentId <= -1) {
+        this.currentId = 6
+        this.currentCharacter = this.characters[6]
+
       } else {
         this.currentCharacter = this.characters[this.currentId]
       }

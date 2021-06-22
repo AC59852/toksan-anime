@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/my%20hero%20academia", {data:[{}],fetch:{},mutations:void 0});

@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/popular", {data:[{}],fetch:{},mutations:void 0});

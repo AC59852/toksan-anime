@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/demon%20slayer", {data:[{}],fetch:{},mutations:void 0});

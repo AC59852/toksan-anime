@@ -64,7 +64,7 @@ export default {
         },
         {
           hid: 'og:title',
-          propert: 'og:title',
+          property: 'og:title',
           content: this.title
         },
         {
@@ -74,7 +74,6 @@ export default {
         },
         {
           hid: 'og:image',
-          name: 'image',
           property: 'og:image',
           content: this.ogImage
         },

@@ -64,17 +64,18 @@ export default {
         },
         {
           hid: 'og:title',
-          name: 'og:title',
+          propert: 'og:title',
           content: this.title
         },
         {
           hid: 'og:description',
-          name: 'og:description',
+          property: 'og:description',
           content: this.description
         },
         {
           hid: 'og:image',
-          name: 'og:image',
+          name: 'image',
+          property: 'og:image',
           content: this.ogImage
         },
         {
